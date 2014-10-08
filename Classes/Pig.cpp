@@ -21,6 +21,11 @@ void Pig::Drag(cocos2d::Vec2 v)
     
 }
 
+void Pig::Click()
+{
+    
+}
+
 void PigReverse::Run(Vec2 v)
 {
     v.x*=640;
@@ -52,6 +57,8 @@ Pig::Pig(int speed,int hp)
     this->Speed=speed;
     //onDelete=[](){};
 }
+
+
 
 
 Pig* Pig::createPig(int pigType)
