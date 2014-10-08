@@ -20,8 +20,3 @@ void PigLayer::addRndPig()
     this->addChild(p);
      p->Run(Flag[Fx]);
 }
-
-void update(float f)
-{ 
-   
-}
