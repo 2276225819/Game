@@ -15,7 +15,9 @@
 class Pig
 {
     int Speed;
+
 public:
+    cocos2d::Sprite * PigSprite;
     int Hp;
     void run();
 public:
