@@ -13,8 +13,7 @@ class IMode
 {
 public:
     int size;
-    void update();
-    
+    void update(); 
 public:
     static IMode getEasyMode(int size);
     static IMode getHardMode(int size);
