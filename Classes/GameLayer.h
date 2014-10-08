@@ -7,7 +7,7 @@ class GameLayer:public Layer
 {
 public:
     bool init();
-    CREATE_FUNC(GameLayer);
+    CREATE_FUNC(GameLayer); 
 
 };
 

@@ -12,8 +12,7 @@
 
 
 bool MainScene::init()
-{
-    
+{ 
     auto st= StartLayer::create();
     addChild(st);
     
