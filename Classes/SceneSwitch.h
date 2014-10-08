@@ -21,7 +21,7 @@ class SceneSwitch
 {
 public:
     static void Index();
-    static void Playing();
+    static void Playing(int m);
     static void GameOver();
 };
 

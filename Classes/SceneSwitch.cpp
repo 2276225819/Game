@@ -15,12 +15,11 @@ void SceneSwitch::Index()
     s->addChild(Index);
     Director::getInstance()->replaceScene(s);
 }
-void SceneSwitch::Playing()
+void SceneSwitch::Playing(int Number)
 {
-    Scene * s = Scene::create();
-    auto Index = IndexLayer::create();
-    s->addChild(Index);
-    Director::getInstance()->replaceScene(s);
+    IMode m = *new IMode();
+    m.size = Number;
+    Director::getInstance()->replaceScene(GameLayer::CreateScene(m));
 }
 
 void SceneSwitch::GameOver()

@@ -11,6 +11,7 @@
 
 class IMode
 {
+public:
     int size;
     void update();
     
