@@ -11,7 +11,7 @@
 
 
 
-void Pig::Run()
+void Pig::Run(Vec2 v)
 {
     Vec2 to=v*600;
     runAction(MoveTo::create(Speed, to));
@@ -19,25 +19,25 @@ void Pig::Run()
 void Pig::Drag(cocos2d::Vec2 v)
 {
     
-
 }
 
-void PigReverse::Run()
+void PigReverse::Run(Vec2 v)
+{
+    int Flag = this->getTag();
+    this->runAction(MoveTo::create(this->Speed, v));
+}
+
+void PigSwap::Run(Vec2 v)
 {
     
 }
 
-void PigSwap::Run()
+void PigClone::Run(Vec2 v)
 {
     
 }
 
-void PigClone::Run()
-{
-    
-}
-
-void PigHide::Run()
+void PigHide::Run(Vec2 v)
 {
     
 }
