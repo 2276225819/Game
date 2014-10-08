@@ -11,18 +11,21 @@
 
 
 
-void Pig::run()
+void Pig::Run()
 {
     Vec2 to=v*600;
     runAction(MoveTo::create(Speed, to));
 }
-void Pig::drag(cocos2d::Vec2 v)
+void Pig::Drag(cocos2d::Vec2 v)
 {
     
 
 }
 
-
+void PigReverse::Run()
+{
+    
+}
 
 
 
@@ -30,14 +33,14 @@ Pig::Pig(int speed,int hp)
 {
     this->Hp=hp;
     this->Speed=speed;
-    onDelete=[](){};
+    //onDelete=[](){};
 }
 
 
-Pig* Pig::createPig(int Tag)
+Pig* Pig::createPig(int pigType)
 {
     Pig* p;
-    switch (Tag) {
+    switch (pigType) {
         case 1: //普通🐷
             p= new Pig(2, 1);
             break;
