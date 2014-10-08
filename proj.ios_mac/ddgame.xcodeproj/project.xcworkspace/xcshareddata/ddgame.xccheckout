@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CED8B080-E785-4527-ACC9-B3E42DEA83C4</string>
+	<string>C8882B18-1AD8-4DFB-97DB-FB9353E50026</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ddgame</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>380FAF66-2200-4EE2-9ECF-169EE97FD9C7</key>
-		<string>https://github.com/2276225819/ddgame.git</string>
+		<key>19C1163A-7D95-4B32-8C9A-4B8714A675A8</key>
+		<string>https://github.com/2276225819/Game.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>proj.ios_mac/ddgame.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>380FAF66-2200-4EE2-9ECF-169EE97FD9C7</key>
+		<key>19C1163A-7D95-4B32-8C9A-4B8714A675A8</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/2276225819/ddgame.git</string>
+	<string>https://github.com/2276225819/Game.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>380FAF66-2200-4EE2-9ECF-169EE97FD9C7</string>
+	<string>19C1163A-7D95-4B32-8C9A-4B8714A675A8</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>380FAF66-2200-4EE2-9ECF-169EE97FD9C7</string>
+			<string>19C1163A-7D95-4B32-8C9A-4B8714A675A8</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ddgame</string>
+			<string>Game</string>
 		</dict>
 	</array>
 </dict>
