@@ -21,10 +21,12 @@ public:
     Vec2 v;
 public:
     int Hp;
+ 
     void Run();
     void Drag(Vec2 v);
     void Click();
     //std::function<void()> onDelete;
+ 
 public:
     Pig(int speed,int hp);
     void init(int speed,int hp);
@@ -36,7 +38,7 @@ class PigReverse : public Pig
 {
 public:
     PigReverse(int speed,int hp):Pig(speed,hp) {};
-    void Run();
+    void Run(); 
 };
 class PigSwap : public Pig
 {
