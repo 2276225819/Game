@@ -6,18 +6,11 @@ USING_NS_CC;
 
 class GameLayer:public Layer
 {
+    IMode mode;
 public:
     bool init();
-    IMode mode;
-    Scene* CreateScene();
     CREATE_FUNC(GameLayer);
-    static GameLayer* Create(IMode mode)
-    {
-        auto g=new GameLayer();
-        g->mode=mode;
-        g->autorelease();
-        return g;
-    };
+    static Scene* CreateScene(IMode mode) ;
 };
 
 

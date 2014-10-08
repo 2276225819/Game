@@ -31,6 +31,7 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA35F19E4D00C001D400C /* IndexLayer.cpp */; };
 		488DA36719E4D092001D400C /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA36419E4D05A001D400C /* MainScene.cpp */; };
+		488DA37019E4EA68001D400C /* EasyMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA36E19E4EA68001D400C /* EasyMode.cpp */; };
 		48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C0BED419E4C1F0002735C9 /* GameLayer.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
@@ -246,6 +247,8 @@
 		488DA36019E4D00C001D400C /* IndexLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexLayer.h; path = ../Classes/IndexLayer.h; sourceTree = "<group>"; };
 		488DA36419E4D05A001D400C /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = ../Classes/MainScene.cpp; sourceTree = "<group>"; };
 		488DA36519E4D05A001D400C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = ../Classes/MainScene.h; sourceTree = "<group>"; };
+		488DA36E19E4EA68001D400C /* EasyMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EasyMode.cpp; path = ../Classes/EasyMode.cpp; sourceTree = "<group>"; };
+		488DA36F19E4EA68001D400C /* EasyMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyMode.h; path = ../Classes/EasyMode.h; sourceTree = "<group>"; };
 		48C0BED419E4C1F0002735C9 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = ../Classes/GameLayer.cpp; sourceTree = "<group>"; };
 		48C0BED519E4C1F0002735C9 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = ../Classes/GameLayer.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
@@ -446,6 +449,8 @@
 			children = (
 				00CEBD3F19E4E76F00D8704E /* IMode.cpp */,
 				00CEBD4019E4E76F00D8704E /* IMode.h */,
+				488DA36E19E4EA68001D400C /* EasyMode.cpp */,
+				488DA36F19E4EA68001D400C /* EasyMode.h */,
 			);
 			name = mode;
 			sourceTree = "<group>";
@@ -729,6 +734,7 @@
 				00CEBD3919E4E56D00D8704E /* GameOver.cpp in Sources */,
 				488DA36719E4D092001D400C /* MainScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				488DA37019E4EA68001D400C /* EasyMode.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				00CEBD4119E4E76F00D8704E /* IMode.cpp in Sources */,
