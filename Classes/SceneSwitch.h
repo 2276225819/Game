@@ -11,10 +11,9 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
-#include ""
+#include "IndexLayer.h"
 #include "GameLayer.h"
-
-
+#include "GameOver.h"
 
 USING_NS_CC;
 

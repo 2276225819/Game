@@ -8,12 +8,12 @@
 
 #include "MainScene.h"
 
-#include "StartLayer.h"
+#include "IndexLayer.h"
 
 
 bool MainScene::init()
 { 
-    auto st= StartLayer::create();
+    auto st= IndexLayer::create();
     addChild(st);
     
     
