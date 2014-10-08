@@ -19,40 +19,34 @@ Scene* GameLayer::CreateScene(IMode mode)
     s->addChild(g);
     return s;
 }
+Vec2 _op;
 bool GameLayer::init()
 {
     addChild(pigs=PigLayer::create());
-    
     auto Listen = EventListenerTouchOneByOne::create();
     Listen->onTouchBegan =[&](Touch *pTouch, Event *pEvent){
+        _op=pTouch->getLocation();
         auto ls=pigs->getChildren();
-        for (int i,len=ls.size(); i<len; i++) {
+        for (int i=0,len=ls.size(); i<len; i++) {
             auto pig=ls.at(i);
-            if (pig->getBoundingBox().containsPoint(pTouch->getLocation()));
-                //((Pig *)pig)->Click();
+            if (pig->getBoundingBox().containsPoint(pTouch->getLocation()))
+                ((Pig *)pig)->Click();
         }
         return true;
-    };
-    Vec2 op;
-    Listen->onTouchMoved =[&](Touch *pTouch, Event *pEvent){
-        op=pTouch->getLocation();
-    };
+    }; 
     Listen->onTouchEnded =[&](Touch *pTouch, Event *pEvent){
-        Vec2 v=pTouch->getLocation()-op;
+        Vec2 np=pTouch->getLocation();
+        Vec2 v= -_op + np;
         float ag= CC_RADIANS_TO_DEGREES(v.getAngle());
-        ag=(ag>0?ag:ag+360)+90+45;
-        int tg=ag/45;
-        log("%d,    %f",tg,ag);
-        
-        /*
+        ag=(ag>0?ag:360+ag);
+        int tg= 8-((int)(ag/45 + 2.5)%8);
+     
         auto ls=pigs->getChildren();
         for (int i,len=ls.size(); i<len; i++) {
             auto pig=ls.at(i);
-            if (pigs->getTag()==1);
-                //((Pig *)pig)->Click();
+            if (pigs->getTag()==1)
+                ((Pig *)pig)->Drag(Flag[tg]);
         }
-         */
-
     };
     getEventDispatcher()->addEventListenerWithSceneGraphPriority(Listen, this);
     return true;
