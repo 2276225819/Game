@@ -8,16 +8,25 @@
 
 #include "SceneSwitch.h"
 
-  Scene* createScene(Layer* l)
-{
-    auto s=Scene::create();
-    //auto g=GameLayer::create();
-    s->addChild(g);
-    return s;
-}
-
 void SceneSwitch::Index()
 {
+    Scene * s = Scene::create();
     auto Index = IndexLayer::create();
-    Director::getInstance()->replaceScene(Index);
+    s->addChild(Index);
+    Director::getInstance()->replaceScene(s);
+}
+void SceneSwitch::Playing()
+{
+    Scene * s = Scene::create();
+    auto Index = IndexLayer::create();
+    s->addChild(Index);
+    Director::getInstance()->replaceScene(s);
+}
+
+void SceneSwitch::GameOver()
+{
+    Scene * s = Scene::create();
+    auto Index = IndexLayer::create();
+    s->addChild(Index);
+    Director::getInstance()->replaceScene(s);
 }
