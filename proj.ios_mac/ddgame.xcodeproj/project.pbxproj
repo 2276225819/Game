@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B5327119E516F700E22EC8 /* PigLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B5326F19E516F700E22EC8 /* PigLayer.cpp */; };
+		00B5327619E5179E00E22EC8 /* Pig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B5327419E5179E00E22EC8 /* Pig.cpp */; };
 		00CEBD3119E4E17E00D8704E /* ice.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CEBD3019E4E17E00D8704E /* ice.png */; };
 		00CEBD3519E4E3E700D8704E /* SceneSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */; };
 		00CEBD3919E4E56D00D8704E /* GameOver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00CEBD3719E4E56D00D8704E /* GameOver.cpp */; };
@@ -223,6 +225,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00B5326F19E516F700E22EC8 /* PigLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PigLayer.cpp; path = ../Classes/PigLayer.cpp; sourceTree = "<group>"; };
+		00B5327019E516F700E22EC8 /* PigLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PigLayer.h; path = ../Classes/PigLayer.h; sourceTree = "<group>"; };
+		00B5327419E5179E00E22EC8 /* Pig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pig.cpp; path = ../Classes/Pig.cpp; sourceTree = "<group>"; };
+		00B5327519E5179E00E22EC8 /* Pig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pig.h; path = ../Classes/Pig.h; sourceTree = "<group>"; };
 		00CEBD3019E4E17E00D8704E /* ice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ice.png; sourceTree = "<group>"; };
 		00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneSwitch.cpp; path = ../Classes/SceneSwitch.cpp; sourceTree = "<group>"; };
 		00CEBD3419E4E3E700D8704E /* SceneSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSwitch.h; path = ../Classes/SceneSwitch.h; sourceTree = "<group>"; };
@@ -451,6 +457,8 @@
 				00CEBD4019E4E76F00D8704E /* IMode.h */,
 				488DA36E19E4EA68001D400C /* EasyMode.cpp */,
 				488DA36F19E4EA68001D400C /* EasyMode.h */,
+				00B5327419E5179E00E22EC8 /* Pig.cpp */,
+				00B5327519E5179E00E22EC8 /* Pig.h */,
 			);
 			name = mode;
 			sourceTree = "<group>";
@@ -464,6 +472,8 @@
 				488DA36019E4D00C001D400C /* IndexLayer.h */,
 				00CEBD3719E4E56D00D8704E /* GameOver.cpp */,
 				00CEBD3819E4E56D00D8704E /* GameOver.h */,
+				00B5326F19E516F700E22EC8 /* PigLayer.cpp */,
+				00B5327019E516F700E22EC8 /* PigLayer.h */,
 			);
 			name = layer;
 			sourceTree = "<group>";
@@ -730,9 +740,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B5327119E516F700E22EC8 /* PigLayer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				00CEBD3919E4E56D00D8704E /* GameOver.cpp in Sources */,
 				488DA36719E4D092001D400C /* MainScene.cpp in Sources */,
+				00B5327619E5179E00E22EC8 /* Pig.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				488DA37019E4EA68001D400C /* EasyMode.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
