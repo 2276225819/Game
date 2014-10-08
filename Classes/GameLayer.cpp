@@ -19,8 +19,11 @@ Scene* GameLayer::CreateScene(IMode mode)
 
 bool GameLayer::init()
 {
+    auto Listen = EventListenerTouchOneByOne::create();
+    Listen->onTouchBegan =[](Touch *pTouch, Event *pEvent){GameLayer::Click();return true;};
+    Listen->onTouchMoved =[](Touch *pTouch, Event *pEvent){
     
     
-    
+    };
     return true;
 }

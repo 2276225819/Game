@@ -8,6 +8,8 @@ class GameLayer:public Layer
 {
     IMode mode;
 public:
+    void Drag(Vec2 Flag);
+    void Click();
     bool init();
     CREATE_FUNC(GameLayer);
     static Scene* CreateScene(IMode mode) ;
