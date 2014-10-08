@@ -374,11 +374,12 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				48A8F77119E5103C005E37E0 /* sprite */,
+				48C0BED119E4C1DD002735C9 /* layer */,
 				00CEBD3219E4E38600D8704E /* Scene */,
 				488DA36819E4D139001D400C /* mode */,
 				488DA36419E4D05A001D400C /* MainScene.cpp */,
 				488DA36519E4D05A001D400C /* MainScene.h */,
-				48C0BED119E4C1DD002735C9 /* layer */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
@@ -461,6 +462,13 @@
 				00B5327519E5179E00E22EC8 /* Pig.h */,
 			);
 			name = mode;
+			sourceTree = "<group>";
+		};
+		48A8F77119E5103C005E37E0 /* sprite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = sprite;
 			sourceTree = "<group>";
 		};
 		48C0BED119E4C1DD002735C9 /* layer */ = {
