@@ -10,7 +10,7 @@
 
 bool PigLayer::init()
 {
-    return false;
+    return true;
 }
 
 void PigLayer::addPig(int Tag,Pig Flag)
