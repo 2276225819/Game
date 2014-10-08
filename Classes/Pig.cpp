@@ -23,7 +23,8 @@ void Pig::Drag(cocos2d::Vec2 v)
 
 void PigReverse::Run(Vec2 v)
 {
-    int Flag = this->getTag();
+    v.x*=640;
+    v.y*=640;
     this->runAction(MoveTo::create(this->Speed, v));
 }
 
@@ -39,7 +40,10 @@ void PigClone::Run(Vec2 v)
 
 void PigHide::Run(Vec2 v)
 {
-    
+    auto mt = MoveTo::create(this->Speed, v);
+    auto fo = FadeOut::create(1);
+    auto fi = FadeIn::create(1);
+    this->runAction(Sequence::create(mt,fo,fi, NULL));
 }
 
 Pig::Pig(int speed,int hp)
