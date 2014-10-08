@@ -1,21 +1,23 @@
 #ifndef __ddgame__GameLayer__
 #define __ddgame__GameLayer__
 #include "cocos2d.h"
+#include "IMode.h"
 USING_NS_CC;
 
 class GameLayer:public Layer
 {
 public:
     bool init();
-    int gSize;
+    IMode mode;
+    Scene* CreateScene();
     CREATE_FUNC(GameLayer);
-    static GameLayer* Create(int GridLenth)
+    static GameLayer* Create(IMode mode)
     {
         auto g=new GameLayer();
-        g->gSize=GridLenth;
-        g->init();
+        g->mode=mode;
         g->autorelease();
-    }; 
+        return g;
+    };
 };
 
 
