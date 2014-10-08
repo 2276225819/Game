@@ -15,17 +15,23 @@ void SceneSwitch::Index()
     s->addChild(Index);
     Director::getInstance()->replaceScene(s);
 }
-void SceneSwitch::Playing(int Number)
+void SceneSwitch::Playing(int Number,int Flag)
 {
-    IMode m = *new IMode();
-    m.size = Number;
+    IMode m;
+    switch (Flag) {
+        case 0:
+            m = IMode::getEasyMode(Number);
+            break;
+        case 1:
+            m = IMode::getHardMode(Number);
+    }
     Director::getInstance()->replaceScene(GameLayer::CreateScene(m));
 }
 
 void SceneSwitch::GameOver()
 {
     Scene * s = Scene::create();
-    auto Index = IndexLayer::create();
+    auto Index = GameOver::create();
     s->addChild(Index);
     Director::getInstance()->replaceScene(s);
 }
