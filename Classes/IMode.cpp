@@ -17,5 +17,6 @@ IMode IMode::getEasyMode(int size)
 IMode IMode::getHardMode(int size)
 {
     auto e=EasyMode();
+    int i=0;
     return e;
 }
