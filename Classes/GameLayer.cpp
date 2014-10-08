@@ -19,14 +19,31 @@ Scene* GameLayer::CreateScene(IMode mode)
 
 bool GameLayer::init()
 {
+    addChild(pigs=PigLayer::create());
+    
     auto Listen = EventListenerTouchOneByOne::create();
     Listen->onTouchBegan =[&](Touch *pTouch, Event *pEvent){
-        //GameLayer::Click();
+        auto ls=pigs->getChildren();
+        for (int i,len=ls.size(); i<len; i++) {
+            auto pig=ls.at(i);
+            if (pig->getBoundingBox().containsPoint(pTouch->getLocation()))
+                ((Pig *)pig)->Click();
+        }
         return true;
     };
+    
+    
+    Vec2 op;
     Listen->onTouchMoved =[&](Touch *pTouch, Event *pEvent){
-    
-    
+        op=pTouch->getLocation();
+    };
+    Listen->onTouchEnded =[&](Touch *pTouch, Event *pEvent){
+        
     };
     return true;
+}
+
+void GameLayer::ModeA()
+{
+
 }
