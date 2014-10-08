@@ -22,8 +22,6 @@ public:
 public:
     int Hp;
     void run();
-    void drag(Vec2 v);
-    void click();
     std::function<void()> onDelete;
 public:
     Pig(int speed,int hp);
@@ -36,6 +34,7 @@ class PigReverse : public Pig
 {
 public:
     PigReverse(int speed,int hp):Pig(speed,hp) {};
+    
 };
 class PigSwap : public Pig
 {
@@ -51,7 +50,10 @@ public:
 class PigHide: public Pig
 {
 public:
-    PigHide(int speed,int hp):Pig(speed,hp) {};
+    PigHide(int speed,int hp):Pig(speed,hp) {
+        
+    
+    };
 };
 
 
