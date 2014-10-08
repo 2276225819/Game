@@ -10,18 +10,20 @@
 
 bool StartLayer::init()
 {
-    auto sb1= LayerColor::create(Color4B(255, 255, 255, 255), 80, 25);
+    auto l1=LayerColor::create(Color4B(255, 255, 255, 255), 80, 25);
+    auto sb1=MenuItemSprite::create(l1, l1, [](Ref* r) {
+        MessageBox("1", "3");
+    });
     sb1->setPosition(80,25);
-    auto sb2= LayerColor::create(Color4B(255, 255, 255, 255), 80, 80);
+    auto l2=LayerColor::create(Color4B(255, 255, 255, 255), 80, 80);
+
+    auto sb2=MenuItemSprite::create(l2, l2, [](Ref* r)  {
+        MessageBox("2", "3");
+    });
     sb2->setPosition(80,25);
     auto menu=Menu::
-    create(MenuItemSprite::create(sb1, sb1, [](Ref* r) {
-        MessageBox("1", "3");
-    }), MenuItemSprite::create(sb2, sb2, [](Ref* r)  {
-        MessageBox("2", "3");
-    }) , NULL);
+    create(sb1, sb2 , NULL);
     addChild(menu);
-    
     
     return true;
 }
