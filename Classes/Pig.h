@@ -41,17 +41,20 @@ public:
 class PigSwap : public Pig
 {
 public:
+    void Run();
     PigSwap(int speed,int hp):Pig(speed,hp) {};
 };
 class PigClone : public Pig
 {
 public:
+    void Run();
     PigClone(int speed,int hp):Pig(speed,hp) {};
 };
 
 class PigHide: public Pig
 {
 public:
+    void Run();
     PigHide(int speed,int hp):Pig(speed,hp) {};
 };
 

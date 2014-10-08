@@ -27,7 +27,20 @@ void PigReverse::Run()
     
 }
 
+void PigSwap::Run()
+{
+    
+}
 
+void PigClone::Run()
+{
+    
+}
+
+void PigHide::Run()
+{
+    
+}
 
 Pig::Pig(int speed,int hp)
 {
