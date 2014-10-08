@@ -7,10 +7,9 @@ class IndexLayer:public Layer
 {
 public:
     bool init();
-    CREATE_FUNC(StartLayer);
-    
     void selectMap();
     void selectMode();
+    CREATE_FUNC(IndexLayer);
 };
 
 
