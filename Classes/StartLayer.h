@@ -8,6 +8,9 @@ class StartLayer:public Layer
 public:
     bool init();
     CREATE_FUNC(StartLayer);
+    
+    void selectMap();
+    void selectMode();
 };
 
 
