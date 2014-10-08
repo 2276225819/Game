@@ -11,16 +11,50 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
+USING_NS_CC;
 
-class Pig
+class Pig:public Sprite
 {
+
+public:
     int Speed;
+    Vec2 v;
 public:
     int Hp;
     void run();
+    void drag(Vec2 v);
+    void click();
+    std::function<void()> onDelete;
 public:
-    static Pig create(int Tag);
-}
-;
+    Pig(int speed,int hp);
+    void init(int speed,int hp);
+    static Pig* create(int speed,int hp);
+    static Pig* createPig(int Tag);
+};
+
+class PigReverse : public Pig
+{
+public:
+    PigReverse(int speed,int hp):Pig(speed,hp) {};
+};
+class PigSwap : public Pig
+{
+public:
+    PigSwap(int speed,int hp):Pig(speed,hp) {};
+};
+class PigClone : public Pig
+{
+public:
+    PigClone(int speed,int hp):Pig(speed,hp) {};
+};
+
+class PigHide: public Pig
+{
+public:
+    PigHide(int speed,int hp):Pig(speed,hp) {};
+};
+
+
+
 
 #endif /* defined(__ddgame__Pig__) */
