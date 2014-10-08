@@ -24,5 +24,5 @@ void PigLayer::addRndPig()
     auto p = Pig::createPig(Fx);
     p->setTag(Fx);
     this->addChild(p);
-     p->Run(Flag[Fx]);
+    p->Run(Flag[Fx]);
 }
