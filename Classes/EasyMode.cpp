@@ -7,3 +7,9 @@
 //
 
 #include "EasyMode.h"
+
+
+void EasyMode::update()
+{
+
+}

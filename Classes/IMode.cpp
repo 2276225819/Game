@@ -7,3 +7,15 @@
 //
 
 #include "IMode.h"
+#include "EasyMode.h"
+
+IMode IMode::getEasyMode(int size)
+{
+    auto e=EasyMode();
+    return e;
+}
+IMode IMode::getHardMode(int size)
+{
+    auto e=EasyMode();
+    return e;
+}

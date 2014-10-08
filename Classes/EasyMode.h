@@ -4,7 +4,9 @@
 
 class EasyMode:public IMode
 {
-
+public:
+    void update();
+    
 };
 
 

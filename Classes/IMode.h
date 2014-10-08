@@ -13,6 +13,10 @@ class IMode
 {
     int size;
     void update();
+    
+public:
+    static IMode getEasyMode(int size);
+    static IMode getHardMode(int size);
 };
 
 #endif /* defined(__ddgame__IMode__) */
