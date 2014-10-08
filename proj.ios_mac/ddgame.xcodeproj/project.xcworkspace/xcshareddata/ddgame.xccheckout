@@ -12,22 +12,34 @@
 	<dict>
 		<key>19C1163A-7D95-4B32-8C9A-4B8714A675A8</key>
 		<string>https://github.com/2276225819/Game.git</string>
+		<key>ED27D8AE197D7863CFA2FCE5002A2126B7DE2CCF</key>
+		<string>https://github.com/bin8673853/Game.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>proj.ios_mac/ddgame.xcodeproj/project.xcworkspace</string>
+	<string>proj.ios_mac/ddgame.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>19C1163A-7D95-4B32-8C9A-4B8714A675A8</key>
+		<string>../../../../Game</string>
+		<key>ED27D8AE197D7863CFA2FCE5002A2126B7DE2CCF</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/2276225819/Game.git</string>
+	<string>https://github.com/bin8673853/Game.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>19C1163A-7D95-4B32-8C9A-4B8714A675A8</string>
+	<string>ED27D8AE197D7863CFA2FCE5002A2126B7DE2CCF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ED27D8AE197D7863CFA2FCE5002A2126B7DE2CCF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ddGame</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
