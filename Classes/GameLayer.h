@@ -7,8 +7,15 @@ class GameLayer:public Layer
 {
 public:
     bool init();
-    CREATE_FUNC(GameLayer); 
-
+    int gSize;
+    CREATE_FUNC(GameLayer);
+    static GameLayer* Create(int GridLenth)
+    {
+        auto g=new GameLayer();
+        g->gSize=GridLenth;
+        g->init();
+        g->autorelease();
+    }; 
 };
 
 
