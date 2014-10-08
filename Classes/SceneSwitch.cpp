@@ -7,3 +7,9 @@
 //
 
 #include "SceneSwitch.h"
+
+void SceneSwitch::Index()
+{
+    auto Index = IndexLayer::create();
+    
+}
