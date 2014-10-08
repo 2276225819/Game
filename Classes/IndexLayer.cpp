@@ -1,20 +1,20 @@
 //
-//  StartLayer.cpp
+//  IndexLayer.cpp
 //  ddgame
 //
 //  Created by mimix on 14-10-8.
 //
 //
 
-#include "StartLayer.h"
+#include "IndexLayer.h"
 
-bool StartLayer::init()
+bool IndexLayer::init()
 {
     selectMode();
     
     return true;
 }
-void StartLayer::selectMap()
+void IndexLayer::selectMap()
 {
     removeAllChildren();
     auto l1=LayerColor::create(Color4B(255, 255, 255, 255), 80, 25);
@@ -34,7 +34,7 @@ void StartLayer::selectMap()
     addChild(menu);
 }
 
-void StartLayer::selectMode()
+void IndexLayer::selectMode()
 {
     removeAllChildren();
     auto l1=LayerColor::create(Color4B(255, 20, 255, 255), 80, 25);

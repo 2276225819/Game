@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00CEBD3119E4E17E00D8704E /* ice.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CEBD3019E4E17E00D8704E /* ice.png */; };
+		00CEBD3519E4E3E700D8704E /* SceneSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */; };
 		1AC6FB1F180E996B004C840B /* libbox2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFF180E9839004C840B /* libbox2d Mac.a */; };
 		1AC6FB20180E996B004C840B /* libchipmunk Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFD180E9839004C840B /* libchipmunk Mac.a */; };
 		1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2dx Mac.a */; };
@@ -26,7 +27,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		488DA36119E4D00C001D400C /* StartLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA35F19E4D00C001D400C /* StartLayer.cpp */; };
+		488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA35F19E4D00C001D400C /* IndexLayer.cpp */; };
 		488DA36719E4D092001D400C /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA36419E4D05A001D400C /* MainScene.cpp */; };
 		48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C0BED419E4C1F0002735C9 /* GameLayer.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
@@ -220,6 +221,8 @@
 
 /* Begin PBXFileReference section */
 		00CEBD3019E4E17E00D8704E /* ice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ice.png; sourceTree = "<group>"; };
+		00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneSwitch.cpp; path = ../Classes/SceneSwitch.cpp; sourceTree = "<group>"; };
+		00CEBD3419E4E3E700D8704E /* SceneSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSwitch.h; path = ../Classes/SceneSwitch.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
@@ -233,8 +236,8 @@
 		1D6058910D05DD3D006BFB54 /* ddgame iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ddgame iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		488DA35F19E4D00C001D400C /* StartLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StartLayer.cpp; path = ../Classes/StartLayer.cpp; sourceTree = "<group>"; };
-		488DA36019E4D00C001D400C /* StartLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartLayer.h; path = ../Classes/StartLayer.h; sourceTree = "<group>"; };
+		488DA35F19E4D00C001D400C /* IndexLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IndexLayer.cpp; path = ../Classes/IndexLayer.cpp; sourceTree = "<group>"; };
+		488DA36019E4D00C001D400C /* IndexLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexLayer.h; path = ../Classes/IndexLayer.h; sourceTree = "<group>"; };
 		488DA36419E4D05A001D400C /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = ../Classes/MainScene.cpp; sourceTree = "<group>"; };
 		488DA36519E4D05A001D400C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = ../Classes/MainScene.h; sourceTree = "<group>"; };
 		48C0BED419E4C1F0002735C9 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = ../Classes/GameLayer.cpp; sourceTree = "<group>"; };
@@ -329,6 +332,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00CEBD3219E4E38600D8704E /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */,
+				00CEBD3419E4E3E700D8704E /* SceneSwitch.h */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +359,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				00CEBD3219E4E38600D8704E /* Scene */,
 				488DA36819E4D139001D400C /* mode */,
 				488DA36419E4D05A001D400C /* MainScene.cpp */,
 				488DA36519E4D05A001D400C /* MainScene.h */,
@@ -434,8 +447,8 @@
 			children = (
 				48C0BED419E4C1F0002735C9 /* GameLayer.cpp */,
 				48C0BED519E4C1F0002735C9 /* GameLayer.h */,
-				488DA35F19E4D00C001D400C /* StartLayer.cpp */,
-				488DA36019E4D00C001D400C /* StartLayer.h */,
+				488DA35F19E4D00C001D400C /* IndexLayer.cpp */,
+				488DA36019E4D00C001D400C /* IndexLayer.h */,
 			);
 			name = layer;
 			sourceTree = "<group>";
@@ -707,9 +720,10 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				488DA36119E4D00C001D400C /* StartLayer.cpp in Sources */,
+				488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */,
+				00CEBD3519E4E3E700D8704E /* SceneSwitch.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

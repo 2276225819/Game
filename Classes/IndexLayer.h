@@ -3,7 +3,7 @@
 #include "cocos2d.h"
 USING_NS_CC;
 
-class StartLayer:public Layer
+class IndexLayer:public Layer
 {
 public:
     bool init();
