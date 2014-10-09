@@ -13,20 +13,24 @@ bool PigLayer::init()
     return true;
 }
 
-void PigLayer::addPig(int Tag,Pig Flag)
+void PigLayer::addPig(int Fx,int Tp)
 {
-    //Pig::run();
+    Tp=6;
+    auto p = Pig::createPig(Tp);
+    p->setTag(Fx);
+    p->Run(Flag[Fx]);
+    this->addChild(p);
 }
 
 void PigLayer::addRndPig()
 {
     int Fx = arc4random()%8;//方向
     int Tp= arc4random()%8; //小猪类型
-    Tp=0;
+    Tp=6;
     auto p = Pig::createPig(Tp);
     p->setTag(Fx);
     p->Run(Flag[Fx]);
-    log("%d",Fx);
+    //log("%d",Fx);
     this->addChild(p);
 }
 void PigLayer::pigDelete()

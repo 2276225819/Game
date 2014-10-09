@@ -22,8 +22,9 @@ protected:
 
 public:
     int MaxHp;
-public: 
-    void Run(Vec2 v);
+public:
+    virtual void Run(Vec2 v);
+    void RunAt(Vec2 v,Vec2 pos);
     void Drag(Vec2 v);
     void Click();
 //<<<<<<< HEAD
@@ -35,6 +36,7 @@ public:
     void Remove();
 //>>>>>>> FETCH_HEAD
 public:
+    Pig();
     Pig(int speed,int hp);
     void init(int speed,int hp);
     static Pig* create(int speed,int hp);
@@ -44,28 +46,33 @@ public:
 class PigReverse : public Pig
 {
 public:
-    PigReverse(int speed,int hp):Pig(speed,hp) {};
-    void Run(Vec2 v); 
+    PigReverse(int speed,int hp);
+    //PigReverse( ):Pig( ) {};
+    void Drag(Vec2 v);
+      void Run(Vec2 v);
 };
 class PigSwap : public Pig
 {
 public:
     void Run(Vec2 v);
-    PigSwap(int speed,int hp):Pig(speed,hp) {};
+     PigSwap( ):Pig( ) {};
+    PigSwap(int speed,int hp);
 };
 class PigClone : public Pig
 {
 public:
     void Avatar();
-    void Run(Vec2 v);
-    PigClone(int speed,int hp):Pig(speed,hp) {};
+      void Run(Vec2 v);
+    //PigClone( ):Pig( ) {};
+    PigClone(int speed,int hp);
 };
 
 class PigHide: public Pig
 {
 public:
-    void Run(Vec2 v);
-    PigHide(int speed,int hp):Pig(speed,hp) {};
+      void Run(Vec2 v);
+    //PigHide( ):Pig( ) {};
+    PigHide(int speed,int hp);
 };
 
 

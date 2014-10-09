@@ -7,6 +7,8 @@
 //
 
 #include "Pig.h"
+#include "PigLayer.h"
+
 const int RectSize = 640;
 
 Vec2 Pig::FlagToVec(Vec2 v)
@@ -66,21 +68,46 @@ void Pig::Run(Vec2 v)
     }), NULL));
 }
 
-
-void PigReverse::Run(Vec2 v)
+void Pig::RunAt(Vec2 v,Vec2 pos)
 {
-    Pig::Run(v);//反向猪，和普通猪一样移动
+    setPosition(pos);
+    Vec2 po=v*RectSize;                  //起点位置
+
+    //Vec2 pt=Vec2(RectSize-po.x , RectSize-po.y);//对角线位置
+    
+    runAction(Sequence::create(MoveTo::create(Speed, po),CallFunc::create([this](){
+        this->Remove();
+    }), NULL));
 }
+   const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
+
 
 void PigClone::Avatar() //分身函数
 {
-    
+    int Rand = arc4random()%8;
+    for (int i=0; i<4; i++) {
+        Rand+=arc4random()%2+1;
+        auto parent = (PigLayer*)getParent();
+        auto child = createPig(1);
+        child->RunAt(Flag[(Rand)%8],this->getPosition());
+        parent->addChild(child);
+    }
+    this->Remove();
 }
-
+void PigSwap::Run(Vec2 v)//变轨猪移动
+{
+    Pig::Run(v);
+}
+void PigReverse::Run(Vec2 v)//反向猪移动
+{
+    Pig::Run(v);
+}
 void PigClone::Run(Vec2 v)//分身猪移动
 {
+    setPosition(FlagToVec(v));
+    v=Vec2(0.5, 0.5);
     v=FlagToVec(v);
-    auto mt = MoveTo::create(this->Speed, v);
+    auto mt = MoveTo::create(this->Speed, Vec2(RectSize - v.x, RectSize - v.y));
     this->runAction(Sequence::create(mt,CallFunc::create(CC_CALLBACK_0(PigClone::Avatar, this)), NULL));
 }
 
@@ -99,7 +126,7 @@ Pig::Pig(int speed,int hp)
     this->MaxHp=hp;
     this->Speed=speed;
     this->initWithFile("ice.png");
-    this->setScale(0.2, 0.2);
+    this->setScale(0.1, 0.1);
     //onDelete=[](){};
 }
 
@@ -138,5 +165,22 @@ Pig* Pig::createPig(int pigType)
     p->autorelease();
     return p;
 }
+
+PigReverse::PigReverse(int speed,int hp):Pig(speed,hp) {
+
+};
+
+PigSwap::PigSwap(int speed,int hp):Pig(speed,hp) {
+
+};
+PigClone::PigClone(int speed,int hp):Pig(speed,hp) {
+
+};
+
+PigHide::PigHide(int speed,int hp):Pig(speed,hp) {
+
+};
+
+
 
 
