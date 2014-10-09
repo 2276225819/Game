@@ -3,6 +3,7 @@
 #include "cocos2d.h"
 #include "IMode.h"
 #include "PigLayer.h"
+#include "ControlLayer.h"
 USING_NS_CC;
 
 class GameLayer:public Layer
@@ -10,6 +11,7 @@ class GameLayer:public Layer
     IMode mode;
     PigLayer* pigs;
     LabelTTF* labScore;
+    ControlLayer* ctrl;
 private: 
     void initEvent(); 
 public:
