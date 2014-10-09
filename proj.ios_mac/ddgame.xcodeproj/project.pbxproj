@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A6446619E6906E0043E915 /* basePig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A6446419E6906E0043E915 /* basePig.cpp */; };
 		00B5327119E516F700E22EC8 /* PigLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B5326F19E516F700E22EC8 /* PigLayer.cpp */; };
 		00B5327619E5179E00E22EC8 /* Pig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B5327419E5179E00E22EC8 /* Pig.cpp */; };
 		00CEBD3119E4E17E00D8704E /* ice.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CEBD3019E4E17E00D8704E /* ice.png */; };
@@ -226,6 +227,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00A6446419E6906E0043E915 /* basePig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = basePig.cpp; path = ../Classes/basePig.cpp; sourceTree = "<group>"; };
+		00A6446519E6906E0043E915 /* basePig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = basePig.h; path = ../Classes/basePig.h; sourceTree = "<group>"; };
 		00B5326F19E516F700E22EC8 /* PigLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PigLayer.cpp; path = ../Classes/PigLayer.cpp; sourceTree = "<group>"; };
 		00B5327019E516F700E22EC8 /* PigLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PigLayer.h; path = ../Classes/PigLayer.h; sourceTree = "<group>"; };
 		00B5327419E5179E00E22EC8 /* Pig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pig.cpp; path = ../Classes/Pig.cpp; sourceTree = "<group>"; };
@@ -463,6 +466,8 @@
 				488DA36F19E4EA68001D400C /* EasyMode.h */,
 				00B5327419E5179E00E22EC8 /* Pig.cpp */,
 				00B5327519E5179E00E22EC8 /* Pig.h */,
+				00A6446419E6906E0043E915 /* basePig.cpp */,
+				00A6446519E6906E0043E915 /* basePig.h */,
 			);
 			name = mode;
 			sourceTree = "<group>";
@@ -760,6 +765,7 @@
 				00B5327619E5179E00E22EC8 /* Pig.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				488DA37019E4EA68001D400C /* EasyMode.cpp in Sources */,
+				00A6446619E6906E0043E915 /* basePig.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				00CEBD4119E4E76F00D8704E /* IMode.cpp in Sources */,

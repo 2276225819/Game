@@ -45,6 +45,10 @@ bool GameLayer::init()
         auto ls=pigs->getChildren();
         for (int i=(int)(ls.size())-1; i>=0; i--) {
             auto pig=(Pig *)ls.at(i);
+            pig->Drag(tg);
+            /*
+            int i_t=pig->getTag();
+            
             if (pig->getTag()==tg)
             {
                 (pig)->Drag(Flag[tg]);
@@ -52,7 +56,7 @@ bool GameLayer::init()
                     addScore(pig->MaxHp);
                     pig->Remove();
                 }
-            }
+            }*/
         }
 
     };
@@ -60,42 +64,6 @@ bool GameLayer::init()
     return true;
 }
 
-Vec2 _op;
-void GameLayer::initEvent()
-{
-    auto Listen = EventListenerTouchOneByOne::create();
-    Listen->onTouchBegan =[&](Touch *pTouch, Event *pEvent){
-        _op=pTouch->getLocation();
-        auto ls=pigs->getChildren();
-        for (int i=0,len=(int)(ls.size()); i<len; i++) {
-            auto pig=(Pig *)ls.at(i);
-            if (pig->getBoundingBox().containsPoint(pTouch->getLocation()))
-                (pig)->Click();
-        }
-        return true;
-    };
-    Listen->onTouchEnded =[&](Touch *pTouch, Event *pEvent){
-        Vec2 np=pTouch->getLocation();
-        Vec2 v= -_op + np;
-        float ag= CC_RADIANS_TO_DEGREES(v.getAngle());
-        ag=(ag>0?ag:360+ag);
-        int tg= 7-((int)(ag/45 + 2.5)%8);
-        log("Drag:%d",tg);
-        auto ls=pigs->getChildren();
-        for (int i=(int)(ls.size())-1; i>=0; i--) {
-            auto pig=(Pig *)ls.at(i);
-            if (pig->getTag()==tg)
-            {
-                (pig)->Drag(Flag[tg]);
-                if (pig->isDie()) {
-                    addScore(pig->MaxHp);
-                    pig->Remove();
-                }
-            }
-        }
-    };
-    getEventDispatcher()->addEventListenerWithSceneGraphPriority(Listen, this);
-}
 
 
 
@@ -113,7 +81,7 @@ void GameLayer::ModeA()//游戏模式一：随机创建
     ActionInterval* ac;
     ac=Sequence::create(CallFunc::create([&]{
         pigs->addRndPig();
-    }),DelayTime::create(1), NULL);
+    }),DelayTime::create(4), NULL);
     ac=RepeatForever::create(ac);
     runAction(ac);
 }
