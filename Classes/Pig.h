@@ -21,12 +21,19 @@ protected:
     int Hp;
 
 public:
+    int MaxHp;
+public: 
     void Run(Vec2 v);
     void Drag(Vec2 v);
     void Click();
+<<<<<<< HEAD
     Vec2 FlagToVec(Vec2 v);
     //std::function<void()> onDelete;
  
+=======
+    bool isDie();
+    void Remove();
+>>>>>>> FETCH_HEAD
 public:
     Pig(int speed,int hp);
     void init(int speed,int hp);
