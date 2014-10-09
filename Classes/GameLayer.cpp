@@ -24,14 +24,9 @@ bool GameLayer::init()
 {
     auto root=LayerColor::create(Color4B(100, 100, 100, 255), 630, 630);
     addChild(root);
-    
-    
-    addChild(pigs=PigLayer::create());
-    addChild(labScore=LabelTTF::create("TEXT", "yahei", 30));
-    
-    
-    
-    
+    root->addChild(pigs=PigLayer::create());
+    root->addChild(labScore=LabelTTF::create("TEXT", "yahei", 30));
+    ModeA();
     initEvent();
     return true;
 }
@@ -43,10 +38,10 @@ void GameLayer::initEvent()
     Listen->onTouchBegan =[&](Touch *pTouch, Event *pEvent){
         _op=pTouch->getLocation();
         auto ls=pigs->getChildren();
-        for (int i=0,len=ls.size(); i<len; i++) {
-            auto pig=ls.at(i);
+        for (int i=0,len=(int)(ls.size()); i<len; i++) {
+            auto pig=(Pig *)ls.at(i);
             if (pig->getBoundingBox().containsPoint(pTouch->getLocation()))
-                ((Pig *)pig)->Click();
+                (pig)->Click();
         }
         return true;
     };
@@ -55,16 +50,32 @@ void GameLayer::initEvent()
         Vec2 v= -_op + np;
         float ag= CC_RADIANS_TO_DEGREES(v.getAngle());
         ag=(ag>0?ag:360+ag);
-        int tg= 8-((int)(ag/45 + 2.5)%8);
-        
+        int tg= 7-((int)(ag/45 + 2.5)%8);
+        log("Drag:%d",tg);
         auto ls=pigs->getChildren();
-        for (int i,len=ls.size(); i<len; i++) {
-            auto pig=ls.at(i);
-            if (pigs->getTag()==1)
-                ((Pig *)pig)->Drag(Flag[tg]);
+        for (int i=(int)(ls.size())-1; i>=0; i--) {
+            auto pig=(Pig *)ls.at(i);
+            if (pig->getTag()==tg)
+            {
+                (pig)->Drag(Flag[tg]);
+                if (pig->isDie()) {
+                    addScore(pig->MaxHp);
+                    pig->Remove();
+                }
+            }
         }
     };
     getEventDispatcher()->addEventListenerWithSceneGraphPriority(Listen, this);
+}
+
+
+
+int score=0;
+void GameLayer::addScore(int i)
+{
+    score+=i;
+    labScore->setString(String::createWithFormat("%d",score)->getCString());
+
 }
 
 
@@ -73,7 +84,7 @@ void GameLayer::ModeA()//游戏模式一：随机创建
     ActionInterval* ac;
     ac=Sequence::create(CallFunc::create([&]{
         pigs->addRndPig();
-    }),DelayTime::create(1000), NULL);
+    }),DelayTime::create(1), NULL);
     ac=RepeatForever::create(ac);
     runAction(ac);
 }

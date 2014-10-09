@@ -20,9 +20,16 @@ void PigLayer::addPig(int Tag,Pig Flag)
 
 void PigLayer::addRndPig()
 {
-    int Fx = arc4random()%8;
-    auto p = Pig::createPig(Fx);
+    int Fx = arc4random()%8;//方向
+    int Tp= arc4random()%8; //小猪类型
+    Tp=0;
+    auto p = Pig::createPig(Tp);
     p->setTag(Fx);
-    this->addChild(p);
     p->Run(Flag[Fx]);
+    log("%d",Fx);
+    this->addChild(p);
+}
+void PigLayer::pigDelete()
+{
+    
 }

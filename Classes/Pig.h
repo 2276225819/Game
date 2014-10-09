@@ -20,11 +20,13 @@ protected:
     Vec2 v;
     int Hp;
 public:
+    int MaxHp;
+public: 
     void Run(Vec2 v);
     void Drag(Vec2 v);
     void Click();
-    //std::function<void()> onDelete;
- 
+    bool isDie();
+    void Remove();
 public:
     Pig(int speed,int hp);
     void init(int speed,int hp);
