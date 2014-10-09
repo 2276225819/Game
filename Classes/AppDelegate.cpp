@@ -29,7 +29,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     //屏幕适应
-    glview->setDesignResolutionSize(640, 640, ResolutionPolicy::SHOW_ALL);
+    glview->setDesignResolutionSize(640, 1136, ResolutionPolicy::SHOW_ALL);
     
     // create a scene. it's an autorelease object
     auto scene = MainScene::create();// HelloWorld::createScene();
