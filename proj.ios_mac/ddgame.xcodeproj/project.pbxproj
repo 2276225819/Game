@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00B5327119E516F700E22EC8 /* PigLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B5326F19E516F700E22EC8 /* PigLayer.cpp */; };
+		00B5327619E5179E00E22EC8 /* Pig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B5327419E5179E00E22EC8 /* Pig.cpp */; };
 		00CEBD3119E4E17E00D8704E /* ice.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CEBD3019E4E17E00D8704E /* ice.png */; };
 		00CEBD3519E4E3E700D8704E /* SceneSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */; };
 		00CEBD3919E4E56D00D8704E /* GameOver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00CEBD3719E4E56D00D8704E /* GameOver.cpp */; };
@@ -33,8 +34,6 @@
 		488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA35F19E4D00C001D400C /* IndexLayer.cpp */; };
 		488DA36719E4D092001D400C /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA36419E4D05A001D400C /* MainScene.cpp */; };
 		488DA37019E4EA68001D400C /* EasyMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA36E19E4EA68001D400C /* EasyMode.cpp */; };
-		48B7810919E62ECC00B04470 /* ControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48B7810519E62D7B00B04470 /* ControlLayer.cpp */; };
-		48B7810F19E6620400B04470 /* PlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48B7810D19E6620400B04470 /* PlayScene.cpp */; };
 		48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C0BED419E4C1F0002735C9 /* GameLayer.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
@@ -228,6 +227,8 @@
 /* Begin PBXFileReference section */
 		00B5326F19E516F700E22EC8 /* PigLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PigLayer.cpp; path = ../Classes/PigLayer.cpp; sourceTree = "<group>"; };
 		00B5327019E516F700E22EC8 /* PigLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PigLayer.h; path = ../Classes/PigLayer.h; sourceTree = "<group>"; };
+		00B5327419E5179E00E22EC8 /* Pig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pig.cpp; path = ../Classes/Pig.cpp; sourceTree = "<group>"; };
+		00B5327519E5179E00E22EC8 /* Pig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pig.h; path = ../Classes/Pig.h; sourceTree = "<group>"; };
 		00CEBD3019E4E17E00D8704E /* ice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ice.png; sourceTree = "<group>"; };
 		00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneSwitch.cpp; path = ../Classes/SceneSwitch.cpp; sourceTree = "<group>"; };
 		00CEBD3419E4E3E700D8704E /* SceneSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSwitch.h; path = ../Classes/SceneSwitch.h; sourceTree = "<group>"; };
@@ -254,10 +255,6 @@
 		488DA36519E4D05A001D400C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = ../Classes/MainScene.h; sourceTree = "<group>"; };
 		488DA36E19E4EA68001D400C /* EasyMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EasyMode.cpp; path = ../Classes/EasyMode.cpp; sourceTree = "<group>"; };
 		488DA36F19E4EA68001D400C /* EasyMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyMode.h; path = ../Classes/EasyMode.h; sourceTree = "<group>"; };
-		48B7810519E62D7B00B04470 /* ControlLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ControlLayer.cpp; path = ../Classes/ControlLayer.cpp; sourceTree = "<group>"; };
-		48B7810619E62D7B00B04470 /* ControlLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControlLayer.h; path = ../Classes/ControlLayer.h; sourceTree = "<group>"; };
-		48B7810D19E6620400B04470 /* PlayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayScene.cpp; path = ../Classes/PlayScene.cpp; sourceTree = "<group>"; };
-		48B7810E19E6620400B04470 /* PlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayScene.h; path = ../Classes/PlayScene.h; sourceTree = "<group>"; };
 		48C0BED419E4C1F0002735C9 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = ../Classes/GameLayer.cpp; sourceTree = "<group>"; };
 		48C0BED519E4C1F0002735C9 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = ../Classes/GameLayer.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
@@ -355,8 +352,6 @@
 			children = (
 				00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */,
 				00CEBD3419E4E3E700D8704E /* SceneSwitch.h */,
-				48B7810D19E6620400B04470 /* PlayScene.cpp */,
-				48B7810E19E6620400B04470 /* PlayScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -463,6 +458,8 @@
 				00CEBD4019E4E76F00D8704E /* IMode.h */,
 				488DA36E19E4EA68001D400C /* EasyMode.cpp */,
 				488DA36F19E4EA68001D400C /* EasyMode.h */,
+				00B5327419E5179E00E22EC8 /* Pig.cpp */,
+				00B5327519E5179E00E22EC8 /* Pig.h */,
 			);
 			name = mode;
 			sourceTree = "<group>";
@@ -485,8 +482,6 @@
 				00CEBD3819E4E56D00D8704E /* GameOver.h */,
 				00B5326F19E516F700E22EC8 /* PigLayer.cpp */,
 				00B5327019E516F700E22EC8 /* PigLayer.h */,
-				48B7810519E62D7B00B04470 /* ControlLayer.cpp */,
-				48B7810619E62D7B00B04470 /* ControlLayer.h */,
 			);
 			name = layer;
 			sourceTree = "<group>";
@@ -755,16 +750,15 @@
 			files = (
 				00B5327119E516F700E22EC8 /* PigLayer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				48B7810F19E6620400B04470 /* PlayScene.cpp in Sources */,
 				00CEBD3919E4E56D00D8704E /* GameOver.cpp in Sources */,
 				488DA36719E4D092001D400C /* MainScene.cpp in Sources */,
+				00B5327619E5179E00E22EC8 /* Pig.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				488DA37019E4EA68001D400C /* EasyMode.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				00CEBD4119E4E76F00D8704E /* IMode.cpp in Sources */,
 				488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */,
-				48B7810919E62ECC00B04470 /* ControlLayer.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */,
 				00CEBD3519E4E3E700D8704E /* SceneSwitch.cpp in Sources */,
