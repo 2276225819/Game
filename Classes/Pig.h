@@ -19,10 +19,12 @@ protected:
     int Speed;
     Vec2 v;
     int Hp;
+
 public:
     void Run(Vec2 v);
     void Drag(Vec2 v);
     void Click();
+    Vec2 FlagToVec(Vec2 v);
     //std::function<void()> onDelete;
  
 public:
@@ -47,6 +49,7 @@ public:
 class PigClone : public Pig
 {
 public:
+    void Avatar();
     void Run(Vec2 v);
     PigClone(int speed,int hp):Pig(speed,hp) {};
 };

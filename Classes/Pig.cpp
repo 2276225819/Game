@@ -9,13 +9,13 @@
 #include "Pig.h"
 
 
-
-
-void Pig::Run(Vec2 v)
+Vec2 Pig::FlagToVec(Vec2 v)
 {
-    Vec2 to=v*600;
-    runAction(MoveTo::create(Speed, to));
+    v.x*=640;
+    v.y*=640;
+    return v;
 }
+
 void Pig::Drag(cocos2d::Vec2 v)
 {
     
@@ -26,25 +26,34 @@ void Pig::Click()
     
 }
 
+void Pig::Run(Vec2 v)
+{
+    Vec2 to=v*600;
+    runAction(MoveTo::create(Speed, to));
+}
+
+
 void PigReverse::Run(Vec2 v)
 {
-    v.x*=640;
-    v.y*=640;
+    v=FlagToVec(v);
     this->runAction(MoveTo::create(this->Speed, v));
 }
 
-void PigSwap::Run(Vec2 v)
+void PigClone::Avatar()
 {
     
 }
 
 void PigClone::Run(Vec2 v)
 {
-    
+    v=FlagToVec(v);
+    auto mt = MoveTo::create(this->Speed, v);
+    this->runAction(Sequence::create(mt,CallFunc::create(CC_CALLBACK_0(PigClone::Avatar, this)), NULL));
 }
 
 void PigHide::Run(Vec2 v)
 {
+    v=FlagToVec(v);
     auto mt = MoveTo::create(this->Speed, v);
     auto fo = FadeOut::create(1);
     auto fi = FadeIn::create(1);
