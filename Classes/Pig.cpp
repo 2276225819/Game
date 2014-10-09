@@ -7,23 +7,11 @@
 //
 
 #include "Pig.h"
-
+const int RectSize = 640;
 
 Vec2 Pig::FlagToVec(Vec2 v)
 {
-<<<<<<< HEAD
-    v.x*=640;
-    v.y*=640;
-    return v;
-=======
-    Vec2 po=v*640;                  //起点位置
-    setPosition(po);
-    Vec2 pt=Vec2(640-po.x , 640-po.y);//对角线位置
-    
-    runAction(Sequence::create(MoveTo::create(Speed, pt),CallFunc::create([this](){
-        this->Remove();
-    }), NULL));
->>>>>>> FETCH_HEAD
+    return v*RectSize;
 }
 
 void Pig::Drag(cocos2d::Vec2 v)
@@ -69,23 +57,27 @@ void Pig::Remove()
 
 void Pig::Run(Vec2 v)
 {
-    Vec2 to=v*600;
-    runAction(MoveTo::create(Speed, to));
+    Vec2 po=v*RectSize;                  //起点位置
+    setPosition(po);
+    Vec2 pt=Vec2(RectSize-po.x , RectSize-po.y);//对角线位置
+    
+    runAction(Sequence::create(MoveTo::create(Speed, pt),CallFunc::create([this](){
+        this->Remove();
+    }), NULL));
 }
 
 
 void PigReverse::Run(Vec2 v)
 {
-    v=FlagToVec(v);
-    this->runAction(MoveTo::create(this->Speed, v));
+    Pig::Run(v);//反向猪，和普通猪一样移动
 }
 
-void PigClone::Avatar()
+void PigClone::Avatar() //分身函数
 {
     
 }
 
-void PigClone::Run(Vec2 v)
+void PigClone::Run(Vec2 v)//分身猪移动
 {
     v=FlagToVec(v);
     auto mt = MoveTo::create(this->Speed, v);
