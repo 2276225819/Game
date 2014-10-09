@@ -9,6 +9,9 @@ class GameLayer:public Layer
 {
     IMode mode;
     PigLayer* pigs;
+    LabelTTF* labScore;
+private: 
+    void initEvent();
 public:
     void Drag(Vec2 Flag);
     void Click();

@@ -19,10 +19,26 @@ Scene* GameLayer::CreateScene(IMode mode)
     s->addChild(g);
     return s;
 }
-Vec2 _op;
+
 bool GameLayer::init()
 {
+    auto root=LayerColor::create(Color4B(100, 100, 100, 255), 630, 630);
+    addChild(root);
+    
+    
     addChild(pigs=PigLayer::create());
+    addChild(labScore=LabelTTF::create("TEXT", "yahei", 30));
+    
+    
+    
+    
+    initEvent();
+    return true;
+}
+
+Vec2 _op;
+void GameLayer::initEvent()
+{
     auto Listen = EventListenerTouchOneByOne::create();
     Listen->onTouchBegan =[&](Touch *pTouch, Event *pEvent){
         _op=pTouch->getLocation();
@@ -33,14 +49,14 @@ bool GameLayer::init()
                 ((Pig *)pig)->Click();
         }
         return true;
-    }; 
+    };
     Listen->onTouchEnded =[&](Touch *pTouch, Event *pEvent){
         Vec2 np=pTouch->getLocation();
         Vec2 v= -_op + np;
         float ag= CC_RADIANS_TO_DEGREES(v.getAngle());
         ag=(ag>0?ag:360+ag);
         int tg= 8-((int)(ag/45 + 2.5)%8);
-     
+        
         auto ls=pigs->getChildren();
         for (int i,len=ls.size(); i<len; i++) {
             auto pig=ls.at(i);
@@ -49,11 +65,7 @@ bool GameLayer::init()
         }
     };
     getEventDispatcher()->addEventListenerWithSceneGraphPriority(Listen, this);
-    return true;
 }
-
-
-
 
 
 void GameLayer::ModeA()//游戏模式一：随机创建
