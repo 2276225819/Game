@@ -9,12 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/IMode.cpp"
-            timestampString = "434433815.904643"
+            filePath = "../Classes/SceneSwitch.cpp"
+            timestampString = "434529250.852832"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17">
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "SceneSwitch::Playing(int GameSize,int GameMode,int ControlMode)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
