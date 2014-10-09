@@ -45,6 +45,7 @@ bool GameLayer::init()
         auto ls=pigs->getChildren();
         for (int i=(int)(ls.size())-1; i>=0; i--) {
             auto pig=(Pig *)ls.at(i);
+            int i_t=pig->getTag();
             if (pig->getTag()==tg)
             {
                 (pig)->Drag(Flag[tg]);
@@ -113,7 +114,7 @@ void GameLayer::ModeA()//游戏模式一：随机创建
     ActionInterval* ac;
     ac=Sequence::create(CallFunc::create([&]{
         pigs->addRndPig();
-    }),DelayTime::create(1), NULL);
+    }),DelayTime::create(4), NULL);
     ac=RepeatForever::create(ac);
     runAction(ac);
 }
