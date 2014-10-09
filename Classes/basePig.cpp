@@ -14,7 +14,11 @@ Vec2 Pig::FlagToVec(Vec2 v)
     return v*RectSize;
 }
 
+<<<<<<< HEAD
 void Pig::Drag(int tag)
+=======
+void Pig::Drag(cocos2d::Vec2 v)
+>>>>>>> FETCH_HEAD
 {
     Hp--;
     runAction(
