@@ -8,6 +8,7 @@ USING_NS_CC;
 
 class GameLayer:public Layer
 {
+    Node* root;
     IMode mode;
     PigLayer* pigs;
     LabelTTF* labScore;
@@ -23,6 +24,7 @@ public:
     static Scene* CreateScene(IMode mode) ;
 public:
     void ModeA();
+    void onPigDelete(Pig *pig);
 };
 
 
