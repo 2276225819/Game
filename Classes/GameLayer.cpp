@@ -40,7 +40,7 @@ bool GameLayer::init()
     root->setPosition(s.width/2,s.height/2);
     root->addChild(pigs=PigLayer::create());
     root->addChild(labScore=LabelTTF::create("Score:0", "yahei", 30));
-    root->addChild(ctrl=ControlLayer::CreateAt(0));
+    addChild(ctrl=ControlLayer::CreateAt(0));
     addChild(root);
     labScore->setPosition(0,s.height/2);
     labScore->setAnchorPoint(Vec2(0,0)); 

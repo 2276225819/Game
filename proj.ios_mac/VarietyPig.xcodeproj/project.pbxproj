@@ -15,9 +15,9 @@
 		00B6861819E7C5EF00A6EDA2 /* RockerUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B6861419E7C5EF00A6EDA2 /* RockerUp.png */; };
 		00B6862319E7D70C00A6EDA2 /* SlideUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B6862119E7D70C00A6EDA2 /* SlideUp.png */; };
 		00B6862419E7D70C00A6EDA2 /* SlideDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B6862219E7D70C00A6EDA2 /* SlideDown.png */; };
-		00B6862719E7D7DC00A6EDA2 /* HRocker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B6862519E7D7DC00A6EDA2 /* HRocker.cpp */; };
 		00B6862A19E7D89400A6EDA2 /* yg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B6862819E7D89400A6EDA2 /* yg.png */; };
 		00B6862B19E7D89400A6EDA2 /* ygbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B6862919E7D89400A6EDA2 /* ygbg.png */; };
+		00B6862F19E7DABD00A6EDA2 /* JoyStick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B6862D19E7DABD00A6EDA2 /* JoyStick.cpp */; };
 		00CEBD3119E4E17E00D8704E /* ice.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CEBD3019E4E17E00D8704E /* ice.png */; };
 		00CEBD3519E4E3E700D8704E /* SceneSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */; };
 		00CEBD3919E4E56D00D8704E /* GameOver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00CEBD3719E4E56D00D8704E /* GameOver.cpp */; };
@@ -249,10 +249,10 @@
 		00B6861419E7C5EF00A6EDA2 /* RockerUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RockerUp.png; sourceTree = "<group>"; };
 		00B6862119E7D70C00A6EDA2 /* SlideUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SlideUp.png; sourceTree = "<group>"; };
 		00B6862219E7D70C00A6EDA2 /* SlideDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SlideDown.png; sourceTree = "<group>"; };
-		00B6862519E7D7DC00A6EDA2 /* HRocker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HRocker.cpp; sourceTree = "<group>"; };
-		00B6862619E7D7DC00A6EDA2 /* HRocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRocker.h; sourceTree = "<group>"; };
 		00B6862819E7D89400A6EDA2 /* yg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yg.png; sourceTree = "<group>"; };
 		00B6862919E7D89400A6EDA2 /* ygbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ygbg.png; sourceTree = "<group>"; };
+		00B6862D19E7DABD00A6EDA2 /* JoyStick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JoyStick.cpp; sourceTree = "<group>"; };
+		00B6862E19E7DABD00A6EDA2 /* JoyStick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoyStick.h; sourceTree = "<group>"; };
 		00CEBD3019E4E17E00D8704E /* ice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ice.png; sourceTree = "<group>"; };
 		00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneSwitch.cpp; path = ../Classes/SceneSwitch.cpp; sourceTree = "<group>"; };
 		00CEBD3419E4E3E700D8704E /* SceneSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSwitch.h; path = ../Classes/SceneSwitch.h; sourceTree = "<group>"; };
@@ -485,10 +485,10 @@
 		488DA36819E4D139001D400C /* mode */ = {
 			isa = PBXGroup;
 			children = (
+				00B6862D19E7DABD00A6EDA2 /* JoyStick.cpp */,
+				00B6862E19E7DABD00A6EDA2 /* JoyStick.h */,
 				48FED67B19E7B05700E083FE /* HardMode.cpp */,
 				48FED67C19E7B05700E083FE /* HardMode.h */,
-				00B6862519E7D7DC00A6EDA2 /* HRocker.cpp */,
-				00B6862619E7D7DC00A6EDA2 /* HRocker.h */,
 				0050272319E7808F00FCA1F6 /* EasyMode.h */,
 				4803139E19E78C01004474E0 /* EasyMode.cpp */,
 			);
@@ -795,12 +795,12 @@
 				00B5327119E516F700E22EC8 /* PigLayer.cpp in Sources */,
 				4803139F19E78C01004474E0 /* EasyMode.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				00B6862719E7D7DC00A6EDA2 /* HRocker.cpp in Sources */,
 				00CEBD3919E4E56D00D8704E /* GameOver.cpp in Sources */,
 				488DA36719E4D092001D400C /* MainScene.cpp in Sources */,
 				0050272019E77FEB00FCA1F6 /* Seting.cpp in Sources */,
 				00B5327619E5179E00E22EC8 /* Pig.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				00B6862F19E7DABD00A6EDA2 /* JoyStick.cpp in Sources */,
 				00A6446619E6906E0043E915 /* basePig.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,

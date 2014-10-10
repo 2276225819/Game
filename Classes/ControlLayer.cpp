@@ -91,5 +91,11 @@ DragControl::DragControl():ControlLayer()
 
 RockerControl::RockerControl():ControlLayer()
 {
-    
+    auto Right = JoyStick::create(30, 100, true, true, false, false);
+    Right->setBallWithName("yg.png");
+    Right->setDockWithName("ygbg.png");
+    Right->setDelegate(new f());
+    Right->setHitAreaWithRadius(200);
+    this->addChild(Right);
+    //Right->setPosition(Vec2(size.width-JoyStickPosX, JoyStickPosY));
 }

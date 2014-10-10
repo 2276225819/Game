@@ -7,6 +7,7 @@
 //
 
 #include "Seting.h"
+#include "SceneSwitch.h"
 
 #define RockerUpPath "RockerUp.png"
 #define RockerDownPath "RockerDown.png"
@@ -25,11 +26,13 @@ Scene * Seting::SceneCreate()
 void SetRockerMode(Ref* f)
 {
     UserDefault::getInstance()->setBoolForKey("IMode", 1);
+    SceneSwitch::Starting();
 }
 
 void SetSlideMode(Ref *f)
 {
     UserDefault::getInstance()->setBoolForKey("IMode", 0);
+    SceneSwitch::Starting();
 }
 
 bool Seting::init()
