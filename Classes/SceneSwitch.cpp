@@ -12,6 +12,7 @@
 #include "GameOver.h"
 #include "GameLayer.h"
 #include "EasyMode.h"
+#include "HardMode.h"
 
 Scene* CreateScene(Layer* l)
 {
@@ -55,6 +56,8 @@ void SceneSwitch::Playing(int Flag)
         case 0:
             m = EasyMode::create();
             break;
+        case 1:
+            m = HardMode::create();
         default:
             m = GameLayer::create();
     }

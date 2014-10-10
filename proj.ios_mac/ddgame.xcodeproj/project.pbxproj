@@ -38,6 +38,7 @@
 		48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C0BED419E4C1F0002735C9 /* GameLayer.cpp */; };
 		48E8863819E66D7000752E11 /* ControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48E8863719E66D7000752E11 /* ControlLayer.cpp */; };
 		48ED2A6919E7848900D4E54E /* StartScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48ED2A6419E7843F00D4E54E /* StartScene.cpp */; };
+		48FED67D19E7B05700E083FE /* HardMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48FED67B19E7B05700E083FE /* HardMode.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -266,6 +267,8 @@
 		48E8863719E66D7000752E11 /* ControlLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ControlLayer.cpp; sourceTree = "<group>"; };
 		48ED2A6419E7843F00D4E54E /* StartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StartScene.cpp; sourceTree = "<group>"; };
 		48ED2A6519E7843F00D4E54E /* StartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScene.h; sourceTree = "<group>"; };
+		48FED67B19E7B05700E083FE /* HardMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HardMode.cpp; path = ../Classes/HardMode.cpp; sourceTree = "<group>"; };
+		48FED67C19E7B05700E083FE /* HardMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HardMode.h; path = ../Classes/HardMode.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -467,6 +470,8 @@
 		488DA36819E4D139001D400C /* mode */ = {
 			isa = PBXGroup;
 			children = (
+				48FED67B19E7B05700E083FE /* HardMode.cpp */,
+				48FED67C19E7B05700E083FE /* HardMode.h */,
 				0050272319E7808F00FCA1F6 /* EasyMode.h */,
 				4803139E19E78C01004474E0 /* EasyMode.cpp */,
 				00B5327419E5179E00E22EC8 /* Pig.cpp */,
@@ -612,11 +617,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				TargetAttributes = {
-					1D6058900D05DD3D006BFB54 = {
-						
-					};
-				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ddgame" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -780,6 +780,7 @@
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */,
 				00CEBD3519E4E3E700D8704E /* SceneSwitch.cpp in Sources */,
+				48FED67D19E7B05700E083FE /* HardMode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
