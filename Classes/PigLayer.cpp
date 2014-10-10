@@ -17,8 +17,9 @@ bool PigLayer::init()
 
 void PigLayer::removeChild(Node* child, bool cleanup )
 {
-    cocos2d::Node::removeChild(child);
     onRemove((Pig*)child);
+    cocos2d::Node::removeChild(child);
+    
 }
 
 void PigLayer::addPig(int Fx,int Type)
@@ -33,6 +34,7 @@ void PigLayer::addRndPig()
 {
     int Fx = arc4random()%8;//方向
     int Tp= arc4random()%7; //小猪类型
+    Tp=5;
     addPig(Fx, Tp+1);
 }
 void PigLayer::pigDelete()

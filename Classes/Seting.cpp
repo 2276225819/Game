@@ -35,6 +35,7 @@ void SetSlideMode(Ref *f)
 bool Seting::init()
 {
     auto Rocker = MenuItemImage::create(RockerUpPath, RockerDownPath,SetRockerMode);
+    auto Slide = MenuItemImage::create(SlideUpPath, SlideDownPath,SetSlideMode);
     Rocker->setPosition(Vec2(0, 0));
     auto ButtonMenu = Menu::create(Rocker, NULL);
     ButtonMenu->setPosition(Vec2(300, 300));

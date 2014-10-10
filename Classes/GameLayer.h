@@ -12,7 +12,8 @@ protected:
     PigLayer* pigs;
     LabelTTF* labScore;
     ControlLayer* ctrl;
-private: 
+private:
+    int score=0;
     void initEvent();
 public:
     //void Drag(Vec2 Flag);
