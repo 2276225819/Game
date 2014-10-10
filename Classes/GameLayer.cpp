@@ -24,21 +24,30 @@ Scene* GameLayer::CreateScene(IMode mode)
 
 bool GameLayer::init()
 {
+    Size s=Director::getInstance()->getVisibleSize();
     auto root=LayerColor::create(Color4B(100, 100, 100, 255), 640, 640);
     root->ignoreAnchorPointForPosition(false);
     root->setAnchorPoint(Vec2(0.5,0));
     root->setPosition(630/2,300);
-    addChild(root);
     root->addChild(pigs=PigLayer::create());
     root->addChild(labScore=LabelTTF::create("TEXT", "yahei", 30));
     root->addChild(ctrl=ControlLayer::CreateAt(0));
+    addChild(root);
+    
+    labScore->setPosition(0,s.height/2);
+    labScore->setAnchorPoint(Vec2(0,0));
     
     ModeA();
     
     ctrl->onClick=[this](Vec2 np){
         pigs->each([&](Pig* pig){
             if (pig->getBoundingBox().containsPoint(np))
+            {
                 (pig)->Click();
+                if (pig->isDie()) {
+                    this->addScore(1);
+                }
+            }
         });
     };
     ctrl->onDrag=[this](int tg){
