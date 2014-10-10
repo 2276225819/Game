@@ -9,19 +9,11 @@
 #include "GameLayer.h" 
 
 
+
 Vec2 offPosition(Vec2 p, Node* by)
 {
     return p-by->getPosition();
 }
- 
-/*
-Scene* GameLayer::CreateScene(IMode mode)
-{
-    auto s=Scene::create();
-    auto g=GameLayer::create(); 
-    s->addChild(g);
-    return s;
-}*/
 
 bool GameLayer::init()
 {
@@ -36,8 +28,7 @@ bool GameLayer::init()
     addChild(root);
     labScore->setPosition(0,s.height/2);
     labScore->setAnchorPoint(Vec2(0,0)); 
-
-    
+ 
     ctrl->onClick=[&](Vec2 np){
         Vec2 o1=np;
         pigs->each([&](Pig* pig){ 
@@ -55,13 +46,19 @@ bool GameLayer::init()
             return onPigDelete(pig);
         });
     };
+    pigs->onRemove=[this](Pig* pig){
+        if (!pig->isDie())
+        {
+            log("lost");
+        }
+    };
     return true;
 }
 bool GameLayer::onPigDelete(Pig* pig)
 {
     if (pig->isDie())
     {
-        pig->Remove();
+        pig->Kill();
         this->addScore(1);
         return false;
     }

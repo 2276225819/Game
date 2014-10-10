@@ -33,7 +33,7 @@ void PigClone::Avatar() //分身函数
         parent->addChild(child);
         child->setTag((Rand%8));
     }
-    this->Remove();
+    this->Kill();
 }
 
 void PigSwap::Orbit()

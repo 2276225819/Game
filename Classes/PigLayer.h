@@ -25,8 +25,12 @@ public:
 public:
     void addPig(int Fx,int Tp);
     void addRndPig();
+    void removeChild(Node* child, bool cleanup = true);
+    
     void each(std::function<bool(Pig*)> fn);
     static Pig* createPig(int pigType);
+    std::function<void(Pig*)> onRemove;
+    
 }
 ;
 

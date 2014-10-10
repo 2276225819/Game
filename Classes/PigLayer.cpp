@@ -15,6 +15,12 @@ bool PigLayer::init()
     return true;
 }
 
+void PigLayer::removeChild(Node* child, bool cleanup )
+{
+    cocos2d::Node::removeChild(child);
+    onRemove((Pig*)child);
+}
+
 void PigLayer::addPig(int Fx,int Type)
 {
     auto p =  createPig(Type);

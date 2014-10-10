@@ -32,7 +32,7 @@ bool TestMode:: init()//游戏模式：随机创建
     
     ActionInterval* ac;
     ac=Sequence::create(CallFunc::create([&]{
-        pigs->addPig(rand()%8, 6);
+        pigs->addPig(rand()%8, 1);
     }),DelayTime::create(0.5), NULL);
     ac=RepeatForever::create(ac);
     runAction(ac);

@@ -59,12 +59,11 @@ bool Pig::isDie()
 {
     return Hp==0;
 }
-void Pig::Remove()
-{
-    runAction(Sequence::create(DelayTime::create(0.01),CallFunc::create([&]{
+void Pig::Kill()
+{ 
+    //runAction(Sequence::create(DelayTime::create(0.01),CallFunc::create([&]{
         getParent()->removeChild(this);
-        
-    }), NULL));
+    //}), NULL));
 }
 
 void Pig::Run(Vec2 v)
@@ -74,7 +73,7 @@ void Pig::Run(Vec2 v)
     Vec2 pt=Vec2(RectSize-po.x , RectSize-po.y);//对角线位置
     
     runAction(Sequence::create(MoveTo::create(Speed, pt),CallFunc::create([this](){
-        this->Remove();
+        this->Kill();
     }), NULL));
 }
 void Pig::RunAt(Vec2 v,Vec2 pos)
@@ -85,6 +84,6 @@ void Pig::RunAt(Vec2 v,Vec2 pos)
     Vec2 pt=Vec2(RectSize-po.x , RectSize-po.y);//对角线位置
     
     runAction(Sequence::create(MoveTo::create(Speed, pt),CallFunc::create([this](){
-        this->Remove();
+        this->Kill();
     }), NULL));
 }

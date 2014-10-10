@@ -26,13 +26,11 @@ public:
 public:
     virtual void Run(Vec2 v);
     virtual void RunAt(Vec2 v,Vec2 pos);
- 
     virtual void Drag(int tag);
- 
     virtual void Click();
     Vec2 FlagToVec(Vec2 v);
     bool isDie();
-    void Remove();
+    void Kill();
 public:
     Pig();
     Pig(int speed,int hp);
