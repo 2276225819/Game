@@ -40,14 +40,6 @@ public:
     static Pig* createPig(int Tag);
 };
 
-class PigClick: public Pig
-{
-public:
-    PigClick();
-    PigClick(int speed,int hp);
-    void Drag(Vec2 v);
-    void Click();
-};
 
 
 

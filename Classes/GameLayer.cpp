@@ -6,7 +6,9 @@
 //
 //
 
-#include "GameLayer.h"
+#include "GameLayer.h" 
+
+
 
 const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
 
@@ -22,45 +24,41 @@ Scene* GameLayer::CreateScene(IMode mode)
 
 bool GameLayer::init()
 {
+    Size s=Director::getInstance()->getVisibleSize();
     auto root=LayerColor::create(Color4B(100, 100, 100, 255), 640, 640);
     root->ignoreAnchorPointForPosition(false);
     root->setAnchorPoint(Vec2(0.5,0));
     root->setPosition(630/2,300);
-    addChild(root);
     root->addChild(pigs=PigLayer::create());
     root->addChild(labScore=LabelTTF::create("TEXT", "yahei", 30));
     root->addChild(ctrl=ControlLayer::CreateAt(0));
+    addChild(root);
+    
+    labScore->setPosition(0,s.height/2);
+    labScore->setAnchorPoint(Vec2(0,0));
     
     ModeA();
     
     ctrl->onClick=[this](Vec2 np){
-        auto ls=pigs->getChildren();
-        for (int i=0,len=(int)(ls.size()); i<len; i++) {
-            auto pig=(Pig *)ls.at(i);
+        pigs->each([&](Pig* pig){
             if (pig->getBoundingBox().containsPoint(np))
+            {
+                log("%f %f",np.x,np.y);
                 (pig)->Click();
-        } 
+                if (pig->isDie()) {
+                    this->addScore(1);
+                }
+            }
+        });
     };
     ctrl->onDrag=[this](int tg){
-        auto ls=pigs->getChildren();
-        for (int i=(int)(ls.size())-1; i>=0; i--) {
-            auto pig=(Pig *)ls.at(i);
+        pigs->each([&](Pig* pig){
             pig->Drag(tg);
-            /*
-            int i_t=pig->getTag();
- 
-            if (pig->getTag()==tg)
-            {
-                (pig)->Drag(Flag[tg]);
-                if (pig->isDie()) {
-                    addScore(pig->MaxHp);
-                    pig->Remove();
-                }
-            }*/
-        }
-
+            if (pig->isDie()) {
+                this->addScore(1);
+            }
+        });
     };
-    
     return true;
 }
 

@@ -14,7 +14,15 @@
 #include "basePig.h"
 USING_NS_CC;
 
- 
+class PigClick: public Pig
+{
+public:
+    PigClick();
+    PigClick(int speed,int hp);
+    void Drag(int tag);
+    void Click();
+};
+
 
 class PigReverse : public Pig
 {
@@ -27,9 +35,10 @@ public:
 class PigSwap : public Pig
 {
 public:
-    void Run(Vec2 v);
-     PigSwap( ):Pig( ) {};
+    PigSwap():Pig(){};
     PigSwap(int speed,int hp);
+    void Orbit();
+    void Run(Vec2 v);
 };
 class PigClone : public PigClick
 {

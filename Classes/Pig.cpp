@@ -9,7 +9,7 @@
 #include "Pig.h"
 #include "PigLayer.h"
  
-void PigClick::Drag(Vec2 v)
+void PigClick::Drag(int tag)
 {
     
 }
@@ -19,6 +19,7 @@ void PigClick::Click()
 }
 
    const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
+
 
 
 void PigClone::Avatar() //分身函数
@@ -34,9 +35,19 @@ void PigClone::Avatar() //分身函数
     }
     this->Remove();
 }
+
+void PigSwap::Orbit()
+{
+    int _Flag = this->getTag();
+    this->RunAt(Flag[(_Flag+arc4random()%8)%8],this->getPosition());
+}
 void PigSwap::Run(Vec2 v)//变轨猪移动
 {
-    Pig::Run(v);
+    setPosition(FlagToVec(v));
+    v=Vec2(0.5, 0.5);
+    v=FlagToVec(v);
+    auto mt = MoveTo::create(this->Speed, Vec2(RectSize - v.x, RectSize - v.y));
+    this->runAction(Sequence::create(mt,CallFunc::create(CC_CALLBACK_0(PigSwap::Orbit , this)), NULL));
 }
 void PigReverse::Run(Vec2 v)//反向猪移动
 {
