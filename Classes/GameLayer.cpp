@@ -36,23 +36,18 @@ bool GameLayer::init()
     ModeA();
     
     ctrl->onClick=[this](Vec2 np){
-        auto ls=pigs->getChildren();
-        for (int i=0,len=(int)(ls.size()); i<len; i++) {
-            auto pig=(Pig *)ls.at(i);
+        pigs->each([&](Pig* pig){
             if (pig->getBoundingBox().containsPoint(np))
                 (pig)->Click();
-        } 
+        });
     };
     ctrl->onDrag=[this](int tg){
-        auto ls=pigs->getChildren();
-        for (int i=(int)(ls.size())-1; i>=0; i--) {
-            auto pig=(Pig *)ls.at(i);
+        pigs->each([&](Pig* pig){
             pig->Drag(tg);
             if (pig->isDie()) {
                 this->addScore(1);
             }
-        }
-
+        });
     };
     
     return true;
