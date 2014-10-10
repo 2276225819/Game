@@ -46,11 +46,6 @@ void Pig::Drag(int tag)
      if (getTag()==tag)
      {
          hit();Hp--;
-         if ( isDie()) {
-             
-             //addScore(pig->MaxHp);
-             Remove();
-         }
      }
 }
 

@@ -11,9 +11,7 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
-#include "IndexLayer.h"
-#include "GameLayer.h"
-#include "GameOver.h"
+
 
 USING_NS_CC;
 
@@ -25,7 +23,5 @@ public:
     static void Playing(int Flag);
     static void GameOver();
 };
-
-
 
 #endif /* defined(__ddgame__SceneSwitch__) */

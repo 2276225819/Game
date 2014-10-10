@@ -13,6 +13,7 @@ protected:
 public:
     std::function<void(int)> onDrag;
     std::function<void(Vec2)> onClick;
+    std::function<void(Vec2)> onMove;
 public:
     ControlLayer();
     ~ControlLayer();
