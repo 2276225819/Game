@@ -41,7 +41,7 @@ bool Seting::init()
     
     Slide->setPosition(Vec2(Rocker->getPosition().x + s, 0));
     auto ButtonMenu = Menu::create(Rocker,Slide,NULL);
-    ButtonMenu->setPosition(Vec2(300, 300));
+    ButtonMenu->setPosition(Vec2(100, 100));
     this->addChild(ButtonMenu);
     return true;
 }
