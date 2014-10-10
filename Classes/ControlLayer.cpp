@@ -57,8 +57,6 @@ TouchControl::TouchControl():ControlLayer()
     menu->setPosition(640/2,-10);
     menu->ignoreAnchorPointForPosition(false);
     menu->setAnchorPoint(Vec2(0.5,1));
- 
-    //menu->setAnchorPoint(Vec2(1,1));
 
     for (int i=0; i<8; i++) {
         auto sQ=Sprite::create("CloseNormal.png");

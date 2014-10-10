@@ -64,18 +64,19 @@ void PigClone::Run(Vec2 v)//分身猪移动
 
 void PigHide::Run(Vec2 v)
 {
-    v=FlagToVec(v);
-    auto mt = MoveTo::create(this->Speed, v);
     auto fo = FadeOut::create(1);
     auto fi = FadeIn::create(1);
-    this->runAction(Sequence::create(mt,fo,fi, NULL));
+    Pig::Run(v);
+    this->runAction(Sequence::create(fo,fi, NULL));
 }
 
+const int MaxSpeed = 4;
+std::string s[] ={"普通","快速","厚血","箭猪","变轨","分身","隐形","分身猪"};
 Pig::Pig(int speed,int hp)
 {
     this->Hp=hp;
     this->MaxHp=hp;
-    this->Speed=speed;
+    this->Speed=MaxSpeed - speed;
     this->initWithFile("ice.png");
     this->setScale(0.1, 0.1);
     //onDelete=[](){};
@@ -87,6 +88,7 @@ Pig::Pig(int speed,int hp)
 Pig* Pig::createPig(int pigType)
 {
     Pig* p;
+    
     switch (pigType) {
         case 1: //普通🐷
             p= new Pig(2, 1);
@@ -95,7 +97,7 @@ Pig* Pig::createPig(int pigType)
             p= new Pig(3, 1);
             break;
         case 3: //厚血🐷
-            p= new Pig(1, 2);
+            p= new Pig(1, 3);
             break;
         case 4: //箭猪🐷
             p=new PigReverse(1, 1);
@@ -116,6 +118,7 @@ Pig* Pig::createPig(int pigType)
             p=new Pig(3, 3);
             break;
     }
+    p->addChild(LabelTTF::create(s[pigType-1], "yahai",200));//, const std::string &fontName, float fontSize)
     p->autorelease();
     p->setColor(Color3B(pigType*35, 0, 0));
     return p;

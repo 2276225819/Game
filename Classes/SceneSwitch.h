@@ -20,8 +20,9 @@ USING_NS_CC;
 class SceneSwitch
 {
 public:
+    static void Seting();
     static void Index();
-    static void Playing(int m,int Flag);
+    static void Playing(int Flag);
     static void GameOver();
 };
 

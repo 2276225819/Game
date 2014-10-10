@@ -33,10 +33,8 @@ bool GameLayer::init()
     root->addChild(labScore=LabelTTF::create("TEXT", "yahei", 30));
     root->addChild(ctrl=ControlLayer::CreateAt(0));
     addChild(root);
-    
     labScore->setPosition(0,s.height/2);
     labScore->setAnchorPoint(Vec2(0,0));
-    
     ModeA();
     
     ctrl->onClick=[=](Vec2 np){

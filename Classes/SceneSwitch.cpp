@@ -15,16 +15,16 @@ void SceneSwitch::Index()
     s->addChild(Index);
     Director::getInstance()->replaceScene(s);
 }
-void SceneSwitch::Playing(int Number,int Flag)
+
+void SceneSwitch::Seting()
+{
+    
+}
+
+void SceneSwitch::Playing(int Flag)
 {
     IMode m;
-    switch (Flag) {
-        case 0:
-            m = IMode::getEasyMode(Number);
-            break;
-        case 1:
-            m = IMode::getHardMode(Number);
-    }
+    m = IMode::getEasyMode(3);
     Director::getInstance()->replaceScene(GameLayer::CreateScene(m));
 }
 
