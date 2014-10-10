@@ -7,15 +7,12 @@
 //
 
 #include "MainScene.h"
-#include "GameLayer.h"
-#include "IndexLayer.h"
 
+#include "StartScene.h"
 
 bool MainScene::init()
 { 
-    auto st= GameLayer::create();
+    auto st=StartScene::create();
     addChild(st);
-    
-    
     return true;
 }

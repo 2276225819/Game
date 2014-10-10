@@ -36,6 +36,7 @@
 		488DA36719E4D092001D400C /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA36419E4D05A001D400C /* MainScene.cpp */; };
 		48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C0BED419E4C1F0002735C9 /* GameLayer.cpp */; };
 		48E8863819E66D7000752E11 /* ControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48E8863719E66D7000752E11 /* ControlLayer.cpp */; };
+		48ED2A6919E7848900D4E54E /* StartScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48ED2A6419E7843F00D4E54E /* StartScene.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -261,6 +262,8 @@
 		48C0BED519E4C1F0002735C9 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = ../Classes/GameLayer.h; sourceTree = "<group>"; };
 		48E8863619E66D7000752E11 /* ControlLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlLayer.h; sourceTree = "<group>"; };
 		48E8863719E66D7000752E11 /* ControlLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ControlLayer.cpp; sourceTree = "<group>"; };
+		48ED2A6419E7843F00D4E54E /* StartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StartScene.cpp; sourceTree = "<group>"; };
+		48ED2A6519E7843F00D4E54E /* StartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScene.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -358,6 +361,8 @@
 				00CEBD3419E4E3E700D8704E /* SceneSwitch.h */,
 				0050271E19E77FEB00FCA1F6 /* Seting.cpp */,
 				0050271F19E77FEB00FCA1F6 /* Seting.h */,
+				48ED2A6419E7843F00D4E54E /* StartScene.cpp */,
+				48ED2A6519E7843F00D4E54E /* StartScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -766,6 +771,7 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */,
+				48ED2A6919E7848900D4E54E /* StartScene.cpp in Sources */,
 				48E8863819E66D7000752E11 /* ControlLayer.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */,
