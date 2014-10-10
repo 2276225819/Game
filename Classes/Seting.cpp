@@ -7,3 +7,14 @@
 //
 
 #include "Seting.h"
+
+Scene * Seting::SceneCreate()
+{
+    auto s = Seting::create();
+    return s;
+}
+
+bool Seting::init()
+{
+    return true;
+}
