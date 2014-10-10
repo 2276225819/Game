@@ -8,6 +8,18 @@
 
 #include "SceneSwitch.h"
 
+#include "IndexLayer.h"
+#include "GameOver.h"
+#include "GameLayer.h"
+#include "EasyMode.h"
+
+Scene* CreateScene(Layer* l)
+{
+    auto s=Scene::create();
+    s->addChild(l);
+    return s;
+}
+
 void SceneSwitch::Index()
 {
     Scene * s = Scene::create();
@@ -15,17 +27,17 @@ void SceneSwitch::Index()
     s->addChild(Index);
     Director::getInstance()->replaceScene(s);
 }
-void SceneSwitch::Playing(int Number,int Flag)
+void SceneSwitch::Playing(int Flag)
 {
-    IMode m;
+    GameLayer* m; 
     switch (Flag) {
         case 0:
-            m = IMode::getEasyMode(Number);
+            m = EasyMode::create();
             break;
-        case 1:
-            m = IMode::getHardMode(Number);
+        default:
+            m = GameLayer::create();
     }
-    Director::getInstance()->replaceScene(GameLayer::CreateScene(m));
+    Director::getInstance()->replaceScene(CreateScene(m));
 }
 
 void SceneSwitch::GameOver()

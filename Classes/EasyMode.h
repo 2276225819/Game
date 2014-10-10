@@ -1,13 +1,20 @@
+//
+//  EaseMode.h
+//  ddgame
+//
+//  Created by mimix on 14-10-10.
+//
+//
+
 #ifndef __ddgame__EasyMode__
 #define __ddgame__EasyMode__
-#include "IMode.h"
 
-class EasyMode:public IMode
+#include "GameLayer.h"
+
+class EasyMode :public GameLayer
 {
 public:
-    void update();
-    
+    void Start();
 };
 
-
-#endif /* defined(__ddgame__EasyMode__) */
+#endif /* defined(__ddgame__EaseMode__) */

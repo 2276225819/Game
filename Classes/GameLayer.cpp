@@ -15,15 +15,14 @@ Vec2 offPosition(Vec2 p, Node* by)
 
 const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
 
-
+/*
 Scene* GameLayer::CreateScene(IMode mode)
 {
     auto s=Scene::create();
-    auto g=GameLayer::create();
-    g->mode=mode;
+    auto g=GameLayer::create(); 
     s->addChild(g);
     return s;
-}
+}*/
 
 bool GameLayer::init()
 {
@@ -38,9 +37,7 @@ bool GameLayer::init()
     addChild(root);
     
     labScore->setPosition(0,s.height/2);
-    labScore->setAnchorPoint(Vec2(0,0));
-    
-    ModeA(); 
+    labScore->setAnchorPoint(Vec2(0,0)); 
     
     ctrl->onClick=[&](Vec2 np){
         Vec2 o1=np;
@@ -77,15 +74,4 @@ void GameLayer::addScore(int i)
     score+=i;
     labScore->setString(String::createWithFormat("Score:%d",score)->getCString());
 
-}
-
-
-void GameLayer::ModeA()//游戏模式一：随机创建
-{
-    ActionInterval* ac;
-    ac=Sequence::create(CallFunc::create([&]{
-        pigs->addRndPig();
-    }),DelayTime::create(4), NULL);
-    ac=RepeatForever::create(ac);
-    runAction(ac);
 }
