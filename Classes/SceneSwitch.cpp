@@ -11,6 +11,7 @@
 #include "IndexLayer.h"
 #include "GameOver.h"
 #include "GameLayer.h"
+#include "EasyMode.h"
 
 Scene* CreateScene(Layer* l)
 {
