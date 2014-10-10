@@ -5,7 +5,9 @@ USING_NS_CC;
 
 class ControlLayer:public Layer
 {
+   
 protected:
+     Size s;
     EventListenerTouchOneByOne* listen;
     Vec2 _op;
 public:

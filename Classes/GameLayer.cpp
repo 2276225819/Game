@@ -39,9 +39,13 @@ bool GameLayer::init()
     
     ModeA();
     
-    ctrl->onClick=[this](Vec2 np){
-        pigs->each([&](Pig* pig){
-            if (pig->getBoundingBox().containsPoint(np))
+    ctrl->onClick=[=](Vec2 np){
+        Vec2 o1=np;
+        pigs->each([=](Pig* pig){
+            Vec2 o2=np;
+            auto b=pig->getBoundingBox();
+            auto ps=np-root->getPosition();
+            if (pig->getBoundingBox().containsPoint(np+root->getPosition()))
             {
                 (pig)->Click();
                 if (pig->isDie()) {
@@ -53,6 +57,7 @@ bool GameLayer::init()
     ctrl->onDrag=[this](int tg){
         pigs->each([&](Pig* pig){
             pig->Drag(tg);
+            
             if (pig->isDie()) {
                 this->addScore(1);
             }
