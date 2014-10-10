@@ -8,6 +8,9 @@
 
 #include "GameLayer.h" 
 
+void GameLayer::start()
+{
+}
 Vec2 offPosition(Vec2 p, Node* by)
 {
     return p-by->getPosition();

@@ -17,6 +17,7 @@ private:
 public:
     //void Drag(Vec2 Flag);
     //void Click();
+    virtual void start();
     void addScore(int i);
     bool init();
     CREATE_FUNC(GameLayer);

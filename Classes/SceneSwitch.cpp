@@ -44,6 +44,7 @@ void SceneSwitch::Playing(int Flag)
             m = GameLayer::create();
     }
     Director::getInstance()->replaceScene(CreateScene(m));
+    m->start();
 
 }
 
