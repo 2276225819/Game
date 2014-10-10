@@ -18,6 +18,7 @@ ControlLayer::ControlLayer()
         onClick(_op);
         return true;
     };
+    s=Director::getInstance()->getVisibleSize();
     //listen->retain();
 }
 ControlLayer::~ControlLayer()
@@ -78,6 +79,7 @@ DragControl::DragControl():ControlLayer()
         float ag= CC_RADIANS_TO_DEGREES(v.getAngle());
         ag=(ag>0?ag:360+ag);
         int tg= 7-((int)(ag/45 + 2.5)%8);
-        onDrag(tg);
+        log("%f",v.length());
+        if(v.length()>s.width*0.1)onDrag(tg);
     };
 }
