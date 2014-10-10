@@ -17,7 +17,7 @@ class Seting:Layer
 {
 public:
     virtual bool init();
-    Scene * SceneCreate();
+    static Scene * SceneCreate();
     CREATE_FUNC(Seting);
 }
 ;

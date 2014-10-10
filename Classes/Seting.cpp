@@ -37,7 +37,10 @@ bool Seting::init()
     auto Rocker = MenuItemImage::create(RockerUpPath, RockerDownPath,SetRockerMode);
     auto Slide = MenuItemImage::create(SlideUpPath, SlideDownPath,SetSlideMode);
     Rocker->setPosition(Vec2(0, 0));
-    auto ButtonMenu = Menu::create(Rocker, NULL);
+    auto s=Rocker->getBoundingBox().size.width;
+    
+    Slide->setPosition(Vec2(Rocker->getPosition().x + s, 0));
+    auto ButtonMenu = Menu::create(Rocker,Slide,NULL);
     ButtonMenu->setPosition(Vec2(300, 300));
     this->addChild(ButtonMenu);
     return true;

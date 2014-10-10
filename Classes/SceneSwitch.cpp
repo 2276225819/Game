@@ -14,6 +14,7 @@
 #include "EasyMode.h"
 #include "HardMode.h"
 #include "StartScene.h"
+#include "Seting.h"
 
 Scene* CreateScene(Layer* l)
 {
@@ -36,13 +37,12 @@ void SceneSwitch::Starting()
 }
 void SceneSwitch::Seting()
 {
-    
+    auto s = Seting::SceneCreate();
+    Director::getInstance()->replaceScene(s);
     
     
     
     /*
-     
-     
      　”开始游戏“
      《难》 《易》
        《设置》
