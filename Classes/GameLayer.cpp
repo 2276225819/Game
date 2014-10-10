@@ -27,7 +27,7 @@ void shake(Node* n)
 
 Vec2 offPosition(Vec2 p, Node* by)
 {
-    return p-by->getPosition();
+    return p-by->getPosition() +by->getAnchorPointInPoints();
 }
 
 bool GameLayer::init()
@@ -45,8 +45,8 @@ bool GameLayer::init()
     labScore->setAnchorPoint(Vec2(0,0)); 
  
     ctrl->onClick=[&](Vec2 np){
-        Vec2 o1=np;
-        pigs->each([&](Pig* pig){ 
+        pigs->each([&](Pig* pig){
+            Vec2 tt=offPosition(np, root);
             if (pig->getBoundingBox().containsPoint(offPosition(np, root)))
             {
                 pig->Click();
@@ -64,6 +64,7 @@ bool GameLayer::init()
     pigs->onRemove=[this](Pig* pig){
         if (!pig->isDie())
         {
+            //int life
             SceneSwitch::Starting();
             ::shake(root);
         }
@@ -83,7 +84,7 @@ bool GameLayer::onPigDelete(Pig* pig)
 
 
 
-int score=0;
+
 void GameLayer::addScore(int i)
 {
     score+=i;

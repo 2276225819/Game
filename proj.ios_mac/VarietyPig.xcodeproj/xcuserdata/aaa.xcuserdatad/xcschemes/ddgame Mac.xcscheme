@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5087E73D17EB910900C73F5D"
-               BuildableName = "ddgame Mac.app"
-               BlueprintName = "ddgame Mac"
-               ReferencedContainer = "container:ddgame.xcodeproj">
+               BuildableName = "VarietyPig Mac.app"
+               BlueprintName = "VarietyPig Mac"
+               ReferencedContainer = "container:VarietyPig.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5087E73D17EB910900C73F5D"
-            BuildableName = "ddgame Mac.app"
-            BlueprintName = "ddgame Mac"
-            ReferencedContainer = "container:ddgame.xcodeproj">
+            BuildableName = "VarietyPig Mac.app"
+            BlueprintName = "VarietyPig Mac"
+            ReferencedContainer = "container:VarietyPig.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5087E73D17EB910900C73F5D"
-            BuildableName = "ddgame Mac.app"
-            BlueprintName = "ddgame Mac"
-            ReferencedContainer = "container:ddgame.xcodeproj">
+            BuildableName = "VarietyPig Mac.app"
+            BlueprintName = "VarietyPig Mac"
+            ReferencedContainer = "container:VarietyPig.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5087E73D17EB910900C73F5D"
-            BuildableName = "ddgame Mac.app"
-            BlueprintName = "ddgame Mac"
-            ReferencedContainer = "container:ddgame.xcodeproj">
+            BuildableName = "VarietyPig Mac.app"
+            BlueprintName = "VarietyPig Mac"
+            ReferencedContainer = "container:VarietyPig.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

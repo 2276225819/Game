@@ -38,8 +38,9 @@ void PigClone::Avatar() //分身函数
 
 void PigSwap::Orbit()
 {
-    int _Flag = this->getTag();
-    this->RunAt(Flag[(_Flag+arc4random()%8)%8],this->getPosition());
+    int _Flag = (this->getTag()+arc4random()%8)%8;
+    this->RunAt(Flag[_Flag],this->getPosition());
+    this->setTag(_Flag);
 }
 void PigSwap::Run(Vec2 v)//变轨猪移动
 {
@@ -51,7 +52,12 @@ void PigSwap::Run(Vec2 v)//变轨猪移动
 }
 void PigReverse::Run(Vec2 v)//反向猪移动
 {
-    Pig::Run(v);
+    Vec2 po=v*RectSize;                  //起点位置
+    Vec2 pt=Vec2(RectSize-po.x , RectSize-po.y);//对角线位置
+    setPosition(pt);
+    runAction(Sequence::create(MoveTo::create(Speed, po),CallFunc::create([this](){
+        this->Kill();
+    }), NULL));
 }
 void PigClone::Run(Vec2 v)//分身猪移动
 {

@@ -11,6 +11,10 @@
 		00A6446619E6906E0043E915 /* basePig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A6446419E6906E0043E915 /* basePig.cpp */; };
 		00B5327119E516F700E22EC8 /* PigLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B5326F19E516F700E22EC8 /* PigLayer.cpp */; };
 		00B5327619E5179E00E22EC8 /* Pig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00B5327419E5179E00E22EC8 /* Pig.cpp */; };
+		00B6861719E7C5EF00A6EDA2 /* RockerDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B6861319E7C5EF00A6EDA2 /* RockerDown.png */; };
+		00B6861819E7C5EF00A6EDA2 /* RockerUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 00B6861419E7C5EF00A6EDA2 /* RockerUp.png */; };
+		00B6861919E7C5EF00A6EDA2 /* SlideDown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00B6861519E7C5EF00A6EDA2 /* SlideDown.jpg */; };
+		00B6861A19E7C5EF00A6EDA2 /* SlideUp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00B6861619E7C5EF00A6EDA2 /* SlideUp.jpg */; };
 		00CEBD3119E4E17E00D8704E /* ice.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CEBD3019E4E17E00D8704E /* ice.png */; };
 		00CEBD3519E4E3E700D8704E /* SceneSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */; };
 		00CEBD3919E4E56D00D8704E /* GameOver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00CEBD3719E4E56D00D8704E /* GameOver.cpp */; };
@@ -238,6 +242,10 @@
 		00B5327019E516F700E22EC8 /* PigLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PigLayer.h; path = ../Classes/PigLayer.h; sourceTree = "<group>"; };
 		00B5327419E5179E00E22EC8 /* Pig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pig.cpp; path = ../Classes/Pig.cpp; sourceTree = "<group>"; };
 		00B5327519E5179E00E22EC8 /* Pig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pig.h; path = ../Classes/Pig.h; sourceTree = "<group>"; };
+		00B6861319E7C5EF00A6EDA2 /* RockerDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RockerDown.png; sourceTree = "<group>"; };
+		00B6861419E7C5EF00A6EDA2 /* RockerUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RockerUp.png; sourceTree = "<group>"; };
+		00B6861519E7C5EF00A6EDA2 /* SlideDown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SlideDown.jpg; sourceTree = "<group>"; };
+		00B6861619E7C5EF00A6EDA2 /* SlideUp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SlideUp.jpg; sourceTree = "<group>"; };
 		00CEBD3019E4E17E00D8704E /* ice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ice.png; sourceTree = "<group>"; };
 		00CEBD3319E4E3E700D8704E /* SceneSwitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneSwitch.cpp; path = ../Classes/SceneSwitch.cpp; sourceTree = "<group>"; };
 		00CEBD3419E4E3E700D8704E /* SceneSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSwitch.h; path = ../Classes/SceneSwitch.h; sourceTree = "<group>"; };
@@ -556,6 +564,10 @@
 			children = (
 				00CEBD3019E4E17E00D8704E /* ice.png */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
+				00B6861319E7C5EF00A6EDA2 /* RockerDown.png */,
+				00B6861419E7C5EF00A6EDA2 /* RockerUp.png */,
+				00B6861519E7C5EF00A6EDA2 /* SlideDown.jpg */,
+				00B6861619E7C5EF00A6EDA2 /* SlideUp.jpg */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
 			);
@@ -722,6 +734,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B6861A19E7C5EF00A6EDA2 /* SlideUp.jpg in Resources */,
 				00CEBD3119E4E17E00D8704E /* ice.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
@@ -734,6 +747,7 @@
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				00B6861919E7C5EF00A6EDA2 /* SlideDown.jpg in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
@@ -741,6 +755,8 @@
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				00B6861719E7C5EF00A6EDA2 /* RockerDown.png in Resources */,
+				00B6861819E7C5EF00A6EDA2 /* RockerUp.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -854,7 +870,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rujun Chen (XD3W5ZNKW8)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -885,7 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rujun Chen (XD3W5ZNKW8)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
