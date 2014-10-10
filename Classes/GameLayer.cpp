@@ -45,7 +45,6 @@ bool GameLayer::init()
         auto ls=pigs->getChildren();
         for (int i=(int)(ls.size())-1; i>=0; i--) {
             auto pig=(Pig *)ls.at(i);
- 
             pig->Drag(tg);
             /*
             int i_t=pig->getTag();
