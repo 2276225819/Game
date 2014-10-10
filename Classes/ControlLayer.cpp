@@ -95,7 +95,7 @@ RockerControl::RockerControl():ControlLayer()
     Right->setBallWithName("yg.png");
     Right->setDockWithName("ygbg.png");
     Right->setDelegate(new f());
-    Right->setHitAreaWithRadius(200);
+    Right->setHitAreaWithRadius(9999);
     this->addChild(Right);
     //Right->setPosition(Vec2(size.width-JoyStickPosX, JoyStickPosY));
 }
