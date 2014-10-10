@@ -32,6 +32,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		4803139F19E78C01004474E0 /* EasyMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4803139E19E78C01004474E0 /* EasyMode.cpp */; };
 		488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA35F19E4D00C001D400C /* IndexLayer.cpp */; };
 		488DA36719E4D092001D400C /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA36419E4D05A001D400C /* MainScene.cpp */; };
 		48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C0BED419E4C1F0002735C9 /* GameLayer.cpp */; };
@@ -254,6 +255,7 @@
 		1D6058910D05DD3D006BFB54 /* ddgame iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "ddgame iOS.app"; path = VarietyPig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4803139E19E78C01004474E0 /* EasyMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EasyMode.cpp; sourceTree = "<group>"; };
 		488DA35F19E4D00C001D400C /* IndexLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IndexLayer.cpp; path = ../Classes/IndexLayer.cpp; sourceTree = "<group>"; };
 		488DA36019E4D00C001D400C /* IndexLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexLayer.h; path = ../Classes/IndexLayer.h; sourceTree = "<group>"; };
 		488DA36419E4D05A001D400C /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = ../Classes/MainScene.cpp; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				0050272319E7808F00FCA1F6 /* EasyMode.h */,
+				4803139E19E78C01004474E0 /* EasyMode.cpp */,
 				00B5327419E5179E00E22EC8 /* Pig.cpp */,
 				00B5327519E5179E00E22EC8 /* Pig.h */,
 				00A6446419E6906E0043E915 /* basePig.cpp */,
@@ -761,6 +764,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B5327119E516F700E22EC8 /* PigLayer.cpp in Sources */,
+				4803139F19E78C01004474E0 /* EasyMode.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				00CEBD3919E4E56D00D8704E /* GameOver.cpp in Sources */,
 				488DA36719E4D092001D400C /* MainScene.cpp in Sources */,

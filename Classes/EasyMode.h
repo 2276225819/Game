@@ -14,7 +14,9 @@
 class EasyMode :public GameLayer
 {
 public:
-    void Start();
+    void start();
+    bool init();
+    CREATE_FUNC(EasyMode);
 };
 
 #endif /* defined(__ddgame__EaseMode__) */
