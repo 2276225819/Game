@@ -19,8 +19,7 @@ void PigClick::Click()
     Hp--;
 }
 
-   const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
-
+const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
 
 
 void PigClone::Avatar() //分身函数
@@ -29,7 +28,7 @@ void PigClone::Avatar() //分身函数
     auto parent = (PigLayer*)getParent();
     for (int i=0; i<4; i++) {
         Rand+=arc4random()%2+1;
-        auto child = createPig(8);
+        auto child = PigLayer::createPig(8);
         child->RunAt(Flag[(Rand)%8],this->getPosition());
         parent->addChild(child);
         child->setTag((Rand%8));
@@ -72,7 +71,6 @@ void PigHide::Run(Vec2 v)
 }
 
 const int MaxSpeed = 4;
-std::string s[] ={"普通","快速","厚血","箭猪","变轨","分身","隐形","分身猪"};
 Pig::Pig(int speed,int hp)
 {
     this->Hp=hp;
@@ -86,44 +84,6 @@ Pig::Pig(int speed,int hp)
 
 
 
-Pig* Pig::createPig(int pigType)
-{
-    Pig* p;
-    
-    switch (pigType) {
-        case 1: //普通🐷
-            p= new Pig(2, 1);
-            break;
-        case 2: //快速🐷
-            p= new Pig(3, 1);
-            break;
-        case 3: //厚血🐷
-            p= new Pig(1, 3);
-            break;
-        case 4: //箭猪🐷
-            p=new PigReverse(1, 1);
-            break;
-        case 5: //变轨🐷
-            p=new PigSwap(2, 1);
-            break;
-        case 6: //分身🐷
-            p=new PigClone(2, 2);
-            break;
-        case 7: //隐形🐷
-            p=new PigHide(2, 1);
-            break;
-        case 8://分身小猪🐷
-            p=new PigClick(2,1);
-            break;
-        default://test小猪
-            p=new Pig(3, 3);
-            break;
-    }
-    p->addChild(LabelTTF::create(s[pigType-1], "yahai",200));//, const std::string &fontName, float fontSize)
-    p->autorelease();
-    p->setColor(Color3B(pigType*35, 0, 0));
-    return p;
-}
 
 PigReverse::PigReverse(int speed,int hp):Pig(speed,hp) {
     

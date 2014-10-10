@@ -38,7 +38,7 @@ public:
     Pig(int speed,int hp);
     void init(int speed,int hp);
     static Pig* create(int speed,int hp);
-    static Pig* createPig(int Tag);
+    //static Pig* createPig(int Tag);
 };
 
 
