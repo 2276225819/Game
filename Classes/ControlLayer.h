@@ -35,18 +35,22 @@ public:
     DragControl();
 };
 
-class RockerControl:public ControlLayer
+class RockerControl:public ControlLayer,JoyStickDelegate
 {
 public:
     RockerControl();
-};
-
-
-class f:public JoyStickDelegate
-{
-    virtual void onCCJoyStickUpdate(Node *sender, float angle, cocos2d::Point direction, float power){}
-    virtual void onCCJoyStickActivated(Node *sender){}
-    virtual void onCCJoyStickDeactivated(Node *sender){}
+    int ag=0;
+    virtual void onCCJoyStickUpdate(Node *sender, float angle, cocos2d::Point direction, float power){
+        ag=angle;
+    }
+    virtual void onCCJoyStickActivated(Node *sender){
+    
+    }
+    virtual void onCCJoyStickDeactivated(Node *sender){
+        ag=(ag>0?ag:360+ag);
+        int tg= 7-((int)(ag/45 + 2.5)%8);
+        onDrag(tg);
+    }
 };
 
 #endif /* defined(__ddgame__ControlLayer__) */
