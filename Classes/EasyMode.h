@@ -13,10 +13,16 @@
 
 class EasyMode :public GameLayer
 {
-public:
-    void start();
+public: 
     bool init();
     CREATE_FUNC(EasyMode);
+};
+
+class TestMode :public GameLayer
+{
+public:
+    bool init();
+    CREATE_FUNC(TestMode);
 };
 
 #endif /* defined(__ddgame__EaseMode__) */

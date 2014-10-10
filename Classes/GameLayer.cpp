@@ -8,9 +8,7 @@
 
 #include "GameLayer.h" 
 
-void GameLayer::start()
-{
-}
+
 Vec2 offPosition(Vec2 p, Node* by)
 {
     return p-by->getPosition();
@@ -48,25 +46,28 @@ bool GameLayer::init()
             if (pig->getBoundingBox().containsPoint(offPosition(np, root)))
             {
                 pig->Click();
-                onPigDelete(pig);
+                return onPigDelete(pig);
             }
+            return true;
         });
     };
     ctrl->onDrag=[this](int tg){
         pigs->each([&](Pig* pig){
             pig->Drag(tg);
-            onPigDelete(pig);
+            return onPigDelete(pig);
         });
     };
     return true;
 }
-void GameLayer::onPigDelete(Pig* pig)
+bool GameLayer::onPigDelete(Pig* pig)
 {
     if (pig->isDie())
     {
         pig->Remove();
         this->addScore(1);
+        return false;
     }
+    return true;
 }
 
 

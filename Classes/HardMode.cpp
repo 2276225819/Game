@@ -8,19 +8,21 @@
 
 #include "HardMode.h"
 
+ 
 
-void HardMode::start()//游戏模式二：疯狂模式
+bool HardMode:: init()//游戏模式二：疯狂模式
 {
-    ActionInterval* ac;
+    GameLayer::init();
+    
+    
+        ActionInterval* ac;
     ac=Sequence::create(CallFunc::create([&]{
         pigs->addRndPig();
     }),DelayTime::create(1), NULL);
     ac=RepeatForever::create(ac);
     runAction(ac);
-}
-
-bool HardMode:: init()
-{
-    GameLayer::init();
+    
+    
+    
     return true;
 }

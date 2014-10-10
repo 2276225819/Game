@@ -72,7 +72,7 @@ void PigHide::Run(Vec2 v)
 }
 
 const int MaxSpeed = 4;
-std::string s[] ={"普通","快速","厚血","箭猪","变轨","分身","隐形","小猪"};
+std::string s[] ={"普通","快速","厚血","箭猪","变轨","分身","隐形","分身猪"};
 Pig::Pig(int speed,int hp)
 {
     this->Hp=hp;

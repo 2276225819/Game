@@ -13,9 +13,9 @@ bool PigLayer::init()
     return true;
 }
 
-void PigLayer::addPig(int Fx,int Tp)
+void PigLayer::addPig(int Fx,int Type)
 {
-    auto p = Pig::createPig(Tp);
+    auto p = Pig::createPig(Type);
     p->setTag(Fx);
     p->Run(Flag[Fx]);
     this->addChild(p);
@@ -32,10 +32,12 @@ void PigLayer::pigDelete()
     
 }
 
-void PigLayer::each(std::function<void(Pig*)> fn)
+void PigLayer::each(std::function<bool(Pig*)> fn)
 {
     auto ls=getChildren();
     for (int i=0,len=(int)(ls.size()); i<len; i++) {
-        fn((Pig *)ls.at(i));
+        auto p=(Pig *)ls.at(i);
+        if(!fn(p))
+            break;
     }
 }

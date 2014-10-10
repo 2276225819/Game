@@ -15,7 +15,6 @@
 class HardMode :public GameLayer
 {
 public:
-    void start();
     bool init();
     CREATE_FUNC(HardMode);
 };

@@ -29,7 +29,8 @@ bool StartScene::init()
     });
     
     auto itemSet=MenuItemSprite::create(cBtn, cBtn,[](Ref* f){
-        SceneSwitch::Seting();
+        //SceneSwitch::Seting();
+         SceneSwitch::Playing(2);
     });
     
     //itemB->setPosition(0,40);

@@ -26,7 +26,7 @@ public:
     const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
     void addPig(int Fx,int Tp);
     void addRndPig();
-    void each(std::function<void(Pig*)> fn);
+    void each(std::function<bool(Pig*)> fn);
     
 }
 ;

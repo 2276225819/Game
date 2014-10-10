@@ -58,11 +58,14 @@ void SceneSwitch::Playing(int Flag)
             break;
         case 1:
             m = HardMode::create();
+            break;
+        case 2:
+            m = TestMode::create();
+            break;
         default:
             m = GameLayer::create();
     }
-    Director::getInstance()->replaceScene(CreateScene(m));
-    m->start();
+    Director::getInstance()->replaceScene(CreateScene(m)); 
 
 }
 
