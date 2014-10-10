@@ -13,9 +13,10 @@
 USING_NS_CC;
 class Pig:public Sprite
 {
+protected:
     void shake();
     void hit();
-protected:
+
     int Speed;
     Vec2 v;
     int Hp;

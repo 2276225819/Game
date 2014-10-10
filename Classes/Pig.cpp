@@ -15,7 +15,8 @@ void PigClick::Drag(int tag)
 }
 void PigClick::Click()
 {
-    
+    hit();
+    Hp--;
 }
 
    const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};

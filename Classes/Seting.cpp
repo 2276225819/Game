@@ -22,8 +22,13 @@ Scene * Seting::SceneCreate()
     return s;
 }
 
+void EnterGame(Ref* f)
+{
+    //UserDefault::setBoolForKey(<#const char *pKey#>, <#bool value#>)
+}
+
 bool Seting::init()
 {
-    //auto Rocker = MenuItemImage::create(RockerUpPath, RockerDownPath,cc_call);
+    auto Rocker = MenuItemImage::create(RockerUpPath, RockerDownPath,EnterGame);
     return true;
 }
