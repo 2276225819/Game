@@ -8,10 +8,10 @@
 
 #include "Seting.h"
 
-#define RockerUpPath ""
-#define RockerDownPath ""
-#define SlideUpPath ""
-#define SlideDownPath ""
+#define RockerUpPath "RockerUp.png"
+#define RockerDownPath "RockerDown.png"
+#define SlideUpPath "SlideUp.png"
+#define SlideDownPath "SlideDown.png"
 
 
 Scene * Seting::SceneCreate()
@@ -22,13 +22,22 @@ Scene * Seting::SceneCreate()
     return s;
 }
 
-void EnterGame(Ref* f)
+void SetRockerMode(Ref* f)
 {
-    //UserDefault::setBoolForKey(<#const char *pKey#>, <#bool value#>)
+    UserDefault::getInstance()->setBoolForKey("IMode", 1);
+}
+
+void SetSlideMode(Ref *f)
+{
+    UserDefault::getInstance()->setBoolForKey("IMode", 0);
 }
 
 bool Seting::init()
 {
-    auto Rocker = MenuItemImage::create(RockerUpPath, RockerDownPath,EnterGame);
+    auto Rocker = MenuItemImage::create(RockerUpPath, RockerDownPath,SetRockerMode);
+    Rocker->setPosition(Vec2(0, 0));
+    auto ButtonMenu = Menu::create(Rocker, NULL);
+    ButtonMenu->setPosition(Vec2(300, 300));
+    this->addChild(ButtonMenu);
     return true;
 }
