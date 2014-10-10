@@ -27,8 +27,8 @@ bool GameLayer::init()
     Size s=Director::getInstance()->getVisibleSize();
     auto root=LayerColor::create(Color4B(100, 100, 100, 255), 640, 640);
     root->ignoreAnchorPointForPosition(false);
-    root->setAnchorPoint(Vec2(0.5,0));
-    root->setPosition(630/2,300);
+    root->setAnchorPoint(Vec2(0,0));
+    root->setPosition(0,300);
     root->addChild(pigs=PigLayer::create());
     root->addChild(labScore=LabelTTF::create("TEXT", "yahei", 30));
     root->addChild(ctrl=ControlLayer::CreateAt(0));
@@ -39,13 +39,13 @@ bool GameLayer::init()
     
     ModeA();
     
-    ctrl->onClick=[=](Vec2 np){
+    ctrl->onClick=[&](Vec2 np){
         Vec2 o1=np;
-        pigs->each([=](Pig* pig){
-            Vec2 o2=np;
+        pigs->each([&](Pig* pig){
+            Vec2 o=np;
             auto b=pig->getBoundingBox();
-            auto ps=np-root->getPosition();
-            if (pig->getBoundingBox().containsPoint(np+root->getPosition()))
+            //auto ps=np-root->getPosition();
+            if (pig->getBoundingBox().containsPoint(o))
             {
                 log("%f %f",np.x,np.y);
                 (pig)->Click();
