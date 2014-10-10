@@ -8,13 +8,22 @@
 
 #include "Seting.h"
 
+#define RockerUpPath ""
+#define RockerDownPath ""
+#define SlideUpPath ""
+#define SlideDownPath ""
+
+
 Scene * Seting::SceneCreate()
 {
-    auto s = Seting::create();
+    auto s = Scene::create();
+    auto l = Seting::create();
+    s->addChild(l);
     return s;
 }
 
 bool Seting::init()
 {
+    //auto Rocker = MenuItemImage::create(RockerUpPath, RockerDownPath,cc_call);
     return true;
 }

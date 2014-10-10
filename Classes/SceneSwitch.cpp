@@ -31,6 +31,21 @@ void SceneSwitch::Index()
 void SceneSwitch::Seting()
 {
     
+    
+    
+    
+    /*
+     
+     
+     　”开始游戏“
+     《难》 《易》
+       《设置》
+     
+     
+        “设置”
+     《腰杆》 《滑动》
+        《返回》
+     */
 }
 
 void SceneSwitch::Playing(int Flag)

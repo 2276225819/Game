@@ -13,7 +13,7 @@
 #include "cocos2d.h"
 USING_NS_CC;
 
-class Seting:Scene
+class Seting:Layer
 {
 public:
     virtual bool init();
