@@ -13,10 +13,8 @@ Vec2 Pig::FlagToVec(Vec2 v)
 {
     return v*RectSize;
 }
-
-void Pig::Drag(int tag)
+void Pig::shake()
 {
-    Hp--;
     runAction(
               Repeat::
               create(
@@ -26,6 +24,9 @@ void Pig::Drag(int tag)
                             create(0.05, -10),
                             RotateBy::
                             create(0.05, 10), NULL), 3));
+}
+void Pig::hit()
+{
     auto lText=String::createWithFormat("%d",Hp)->getCString();
     auto hSprite=LabelTTF::create(lText, "yahei", 30);
     hSprite->setColor(Color3B(255,255,0));
@@ -35,8 +36,22 @@ void Pig::Drag(int tag)
         me->getParent()->removeChild(me);
         
     }), NULL));
-    getParent()-> addChild(hSprite,10);
-    
+    auto p=getParent()->getParent();
+    p-> addChild(hSprite,10);
+    shake();
+}
+
+void Pig::Drag(int tag)
+{
+     if (getTag()==tag)
+     {
+         hit();Hp--;
+         if ( isDie()) {
+             
+             //addScore(pig->MaxHp);
+             Remove();
+         }
+     }
 }
 
 void Pig::Click()
