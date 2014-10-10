@@ -37,8 +37,13 @@ bool ControlLayer::init()
 ControlLayer* ControlLayer::CreateAt(int type)
 {
     ControlLayer* ct;
+    type=UserDefault::getInstance()->getBoolForKey("IMode", 1);
+    
     switch (type) {
         case 1:
+            ct= new RockerControl();
+            break;
+        case 2:
             ct= new TouchControl();
             break;
         default:
@@ -82,4 +87,9 @@ DragControl::DragControl():ControlLayer()
         int tg= 7-((int)(ag/45 + 2.5)%8);
         if(v.length()>s.width*0.1)onDrag(tg);
     };
+}
+
+RockerControl::RockerControl():ControlLayer()
+{
+    
 }

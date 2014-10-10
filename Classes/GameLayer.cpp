@@ -31,7 +31,8 @@ Vec2 offPosition(Vec2 p, Node* by)
 }
 
 bool GameLayer::init()
-{
+{ 
+    
     Size s=Director::getInstance()->getVisibleSize();
     root=LayerColor::create(Color4B(100, 100, 100, 255), 640, 640);
     root->ignoreAnchorPointForPosition(false);

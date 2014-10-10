@@ -34,6 +34,10 @@ public:
     DragControl();
 };
 
-
+class RockerControl:public ControlLayer
+{
+public:
+    RockerControl();
+};
 
 #endif /* defined(__ddgame__ControlLayer__) */
