@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ddgame.xcodeproj">
+      location = "self:VarietyPig.xcodeproj">
    </FileRef>
 </Workspace>
