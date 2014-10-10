@@ -13,7 +13,7 @@ protected:
     LabelTTF* labScore;
     ControlLayer* ctrl;
 private: 
-    void initEvent(); 
+    void initEvent();
 public:
     //void Drag(Vec2 Flag);
     //void Click(); 

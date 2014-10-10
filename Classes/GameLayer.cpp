@@ -7,7 +7,22 @@
 //
 
 #include "GameLayer.h" 
+#include "SceneSwitch.h"
 
+void shake(Node* n)
+{
+    n->runAction(
+              Repeat::
+              create(
+                     Sequence::
+                     create(
+                            RotateBy::
+                            create(0.01, -1),
+                            RotateBy::
+                            create(0.01, 2),
+                            RotateBy::
+                            create(0.01, -1), NULL), 3));
+}
 
 
 Vec2 offPosition(Vec2 p, Node* by)
@@ -20,8 +35,8 @@ bool GameLayer::init()
     Size s=Director::getInstance()->getVisibleSize();
     root=LayerColor::create(Color4B(100, 100, 100, 255), 640, 640);
     root->ignoreAnchorPointForPosition(false);
-    root->setAnchorPoint(Vec2(0,0));
-    root->setPosition(0,300);
+    root->setAnchorPoint(Vec2(0.5,0.5));
+    root->setPosition(s.width/2,s.height/2);
     root->addChild(pigs=PigLayer::create());
     root->addChild(labScore=LabelTTF::create("Score:0", "yahei", 30));
     root->addChild(ctrl=ControlLayer::CreateAt(0));
@@ -49,7 +64,8 @@ bool GameLayer::init()
     pigs->onRemove=[this](Pig* pig){
         if (!pig->isDie())
         {
-            log("lost");
+            SceneSwitch::Starting();
+            ::shake(root);
         }
     };
     return true;

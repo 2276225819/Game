@@ -13,6 +13,7 @@
 #include "GameLayer.h"
 #include "EasyMode.h"
 #include "HardMode.h"
+#include "StartScene.h"
 
 Scene* CreateScene(Layer* l)
 {
@@ -28,7 +29,11 @@ void SceneSwitch::Index()
     s->addChild(Index);
     Director::getInstance()->replaceScene(s);
 }
-
+void SceneSwitch::Starting()
+{
+    auto s=StartScene::create();
+    Director::getInstance()->replaceScene(s);
+}
 void SceneSwitch::Seting()
 {
     
