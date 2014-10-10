@@ -37,3 +37,11 @@ void PigLayer::pigDelete()
 {
     
 }
+
+void PigLayer::each(std::function<void(Pig*)> fn)
+{
+    auto ls=getChildren();
+    for (int i=0,len=(int)(ls.size()); i<len; i++) {
+        fn((Pig *)ls.at(i));
+    }
+}
