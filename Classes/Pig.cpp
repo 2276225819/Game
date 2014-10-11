@@ -78,6 +78,14 @@ void PigReverse::Run(Vec2 v)//箭猪移动
 {
     Pig::Run(Vec2(1-v.x,1-v.y));
 }
+void PigReverse::Die()
+{
+    stopAllActions();
+    v=Vec2(1-v.x,1-v.y);
+    runAction(Sequence::create(MoveTo::create(0.2, v*640),CallFunc::create([this]{
+        Kill();
+    }) , NULL) );
+}
 void PigClone::Run(Vec2 v)//分身猪移动
 {
     this->v=v;
@@ -91,8 +99,8 @@ void PigClone::Run(Vec2 v)//分身猪移动
 
 void PigHide::Run(Vec2 v)
 {
-    auto fo = FadeOut::create(1);
-    auto fi = FadeIn::create(1);
+    auto fo = FadeOut::create(0.3);
+    auto fi = FadeIn::create(4);
     Pig::Run(v);
     this->runAction(Sequence::create(fo,fi, NULL));
 }

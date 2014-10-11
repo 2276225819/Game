@@ -91,12 +91,15 @@ void GameLayer::gameStop()
     removeChild(ctrl);
 }
 
-
-
-
+int zScore=1;
 void GameLayer::addScore(int i)
 {
     score+=i;
+    labScore->stopAllActions();
+    labScore->runAction(Sequence::create(ScaleBy::create(0.3, 1.1),ScaleTo::create(1, 1),CallFunc::create([]{
+        
+    
+    }), NULL));
     labScore->setString(String::createWithFormat("Score:%d",score)->getCString());
 
 }

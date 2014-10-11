@@ -29,8 +29,7 @@ class PigReverse : public Pig
 {
 public:
     PigReverse(int speed,int hp);
-    //PigReverse( ):Pig( ) {};
-    //void Drag(Vec2 v);
+    void Die();
     void Run(Vec2 v);
 };
 class PigSwap : public Pig
