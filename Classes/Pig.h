@@ -46,7 +46,6 @@ class PigClone : public PigClick
 public:
     void Avatar();
       void Run(Vec2 v);
-    //PigClone( ):Pig( ) {};
     PigClone(int speed,int hp);
 };
 
