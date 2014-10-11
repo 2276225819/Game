@@ -82,6 +82,7 @@ void PigReverse::Die()
 {
     stopAllActions();
     v=Vec2(1-v.x,1-v.y);
+    
     runAction(Sequence::create(MoveTo::create(0.2, v*640),CallFunc::create([this]{
         Kill();
     }) , NULL) );
