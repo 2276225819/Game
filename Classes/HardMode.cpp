@@ -19,7 +19,7 @@ bool HardMode:: init()//游戏模式二：疯狂模式
         ActionInterval* ac;
     ac=Sequence::create(CallFunc::create([&]{
         pigs->addRndPig();
-    }),DelayTime::create(1), NULL);
+    }),DelayTime::create(2), NULL);
     ac=RepeatForever::create(ac);
     runAction(ac);
     
