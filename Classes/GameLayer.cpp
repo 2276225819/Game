@@ -52,7 +52,7 @@ bool GameLayer::init()
             if (pig->getBoundingBox().containsPoint(offPosition(np, root)))
             {
                 pig->Click();
-                return pig->isDie();
+                return onPigDelete(pig);
             }
             return true;
         });
@@ -60,7 +60,7 @@ bool GameLayer::init()
     ctrl->onDrag=[this](int tg){
         pigs->each([&](Pig* pig){
             pig->Drag(tg);
-            return pig->isDie();
+            return onPigDelete(pig);
         });
     };
     pigs->onRemove=[this](Pig* pig){
@@ -68,13 +68,21 @@ bool GameLayer::init()
         {
             this->gameStop();
             this->addChild(GameOver::Create(GameMode));
+            //int life
+            //SceneSwitch::Starting();
             ::shake(root);
         }
-        else
-        {
-            this->addScore(1);
-        }
     };
+    return true;
+}
+bool GameLayer::onPigDelete(Pig* pig)
+{
+    if (pig->isDie())
+    {
+        pig->Kill();
+        this->addScore(1);
+        return false;
+    }
     return true;
 }
 void GameLayer::gameStop()

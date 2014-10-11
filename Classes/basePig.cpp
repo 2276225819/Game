@@ -60,7 +60,7 @@ bool Pig::isDie()
 }
 void Pig::Kill()
 {
-    Hp=0; 
+    Hp=0;
     getParent()->removeChild(this); 
 }
 void Pig::Remove()
