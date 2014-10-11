@@ -54,24 +54,23 @@ ControlLayer* ControlLayer::CreateAt(int type)
     return ct;
 }
 
-
-
 TouchControl::TouchControl():ControlLayer()//按钮
 {
     
     const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
     auto menu=Menu::create();
-    menu->setContentSize(Size(100 ,100));
-    menu->setPosition(640/2,5);
-    menu->ignoreAnchorPointForPosition(false);
-    menu->setAnchorPoint(Vec2(0.5,0));
+    menu->setPosition(0,0);
+    menu->setAnchorPoint(Vec2(0,0));
 
+    
+    
     for (int i=0; i<8; i++) {
         auto sQ=Sprite::create("CloseNormal.png");
         auto item=MenuItemSprite::create(sQ, sQ,[this,i](Ref* r){
             this->onDrag(i);
         });
-        item->setPosition(Flag[i]*100);
+        Vec2 r= Vec2::forAngle(CC_DEGREES_TO_RADIANS(i*45+(90+45)))*80;
+        item->setPosition(r + Vec2(s.width/2, (s.height-640)/2));
         menu->addChild(item);
     }
     addChild(menu);
