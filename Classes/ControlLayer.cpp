@@ -40,10 +40,10 @@ ControlLayer* ControlLayer::CreateAt(int type)
     type=UserDefault::getInstance()->getBoolForKey("IMode", 1);
     
     switch (type) {
-        case 1:
+        case 2:
             ct= new RockerControl();
             break;
-        case 2:
+        case 1:
             ct= new TouchControl();
             break;
         default:
