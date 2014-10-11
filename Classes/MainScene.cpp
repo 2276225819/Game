@@ -10,8 +10,11 @@
 
 #include "StartScene.h"
 
+//#include "jointlayer.h"
+
 bool MainScene::init()
-{ 
+{
+    //addChild(JointLayer::create());
     auto st=StartScene::create();
     addChild(st);
     return true;

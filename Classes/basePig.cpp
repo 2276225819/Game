@@ -34,7 +34,6 @@ void Pig::hit()
     hSprite->runAction(MoveBy::create(1, Vec2(0,80)));
     hSprite->runAction(Sequence::create(FadeOut::create(1),CallFuncN::create([](Node* me){
         me->getParent()->removeChild(me);
-        
     }), NULL));
     auto p=getParent()->getParent();
     p-> addChild(hSprite,10);
@@ -62,29 +61,27 @@ bool Pig::isDie()
 void Pig::Kill()
 {
     Hp=0;
-    //runAction(Sequence::create(DelayTime::create(0.01),CallFunc::create([&]{
-    getParent()->removeChild(this);
+    //runAction(Sequence::create(MoveTo::create(1, v*RectSize),CallFunc::create([this]{
+        getParent()->removeChild(this);
+    
     //}), NULL));
+}
+void Pig::Remove()
+{
+    getParent()->removeChild(this);
 }
 
 void Pig::Run(Vec2 v)
 {
-    Vec2 po=v*RectSize;                  //起点位置
-    setPosition(po);
-    Vec2 pt=Vec2(RectSize-po.x , RectSize-po.y);//对角线位置
-    
-    runAction(Sequence::create(MoveTo::create(Speed, pt),CallFunc::create([this](){
-        getParent()->removeChild(this);
-    }), NULL));
+    RunAt(v, v*RectSize);
 }
 void Pig::RunAt(Vec2 v,Vec2 pos)
 {
+    this->v=v;
     setPosition(pos);
     Vec2 po=v*RectSize;                  //起点位置
-    
     Vec2 pt=Vec2(RectSize-po.x , RectSize-po.y);//对角线位置
-    
     runAction(Sequence::create(MoveTo::create(Speed, pt),CallFunc::create([this](){
-        getParent()->removeChild(this);
+        Remove();
     }), NULL));
 }

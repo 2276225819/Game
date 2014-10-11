@@ -28,6 +28,7 @@ public:
     virtual void RunAt(Vec2 v,Vec2 pos);
     virtual void Drag(int tag);
     virtual void Click();
+    virtual void Remove();
     Vec2 FlagToVec(Vec2 v);
     bool isDie();
     void Kill();

@@ -12,7 +12,7 @@
 bool StartScene::init()
 {
     auto l=LayerColor::create(Color4B(100, 100, 100, 255), 640, 1136);
-    Size s=Director::getInstance()->getVisibleSize();
+    //Size s=Director::getInstance()->getVisibleSize();
     auto aBtn= LabelTTF::create("疯狂模式", "", 30);
     aBtn->setColor(Color3B(255,0,0));
     auto bBtn= LabelTTF::create("简单模式", "", 30);

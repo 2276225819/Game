@@ -7,7 +7,7 @@
 //
 
 #include "GameLayer.h" 
-#include "GameOver.h";
+#include "GameOver.h"
 #include "SceneSwitch.h"
 
 void shake(Node* n)
@@ -68,8 +68,6 @@ bool GameLayer::init()
         {
             this->gameStop();
             this->addChild(GameOver::Create(GameMode));
-            //int life
-            //SceneSwitch::Starting();
             ::shake(root);
         }
     };
@@ -93,7 +91,7 @@ void GameLayer::gameStop()
         return true;
     });
     pigs->stopAllActions();
-    
+    removeChild(ctrl);
 }
 
 
