@@ -17,7 +17,7 @@ bool PigLayer::init()
 
 void PigLayer::removeChild(Node* child, bool cleanup )
 {
-    //onRemove((Pig*)child);
+    onRemove((Pig*)child);
     cocos2d::Node::removeChild(child);
     
 }

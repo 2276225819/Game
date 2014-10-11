@@ -12,6 +12,7 @@
 
 bool EasyMode:: init()//游戏模式一：随机创建
 {
+    GameMode=0;
     GameLayer::init();
      
     ActionInterval* ac;
@@ -28,6 +29,7 @@ bool EasyMode:: init()//游戏模式一：随机创建
 
 bool TestMode:: init()//游戏模式：随机创建
 {
+    GameMode=2;
     GameLayer::init();
     
     ActionInterval* ac;

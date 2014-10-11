@@ -7,6 +7,7 @@
 //
 
 #include "GameLayer.h" 
+#include "GameOver.h";
 #include "SceneSwitch.h"
 
 void shake(Node* n)
@@ -65,8 +66,10 @@ bool GameLayer::init()
     pigs->onRemove=[this](Pig* pig){
         if (!pig->isDie())
         {
+            this->gameStop();
+            this->addChild(GameOver::Create(GameMode));
             //int life
-            SceneSwitch::Starting();
+            //SceneSwitch::Starting();
             ::shake(root);
         }
     };
@@ -81,6 +84,16 @@ bool GameLayer::onPigDelete(Pig* pig)
         return false;
     }
     return true;
+}
+void GameLayer::gameStop()
+{
+    stopAllActions();
+    pigs->each([](Pig* p){
+        p->stopAllActions();
+        return true;
+    });
+    pigs->stopAllActions();
+    
 }
 
 

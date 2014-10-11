@@ -12,9 +12,11 @@ protected:
     PigLayer* pigs;
     LabelTTF* labScore;
     ControlLayer* ctrl;
+    int GameMode=0;
 private:
     int score=0;
     void initEvent();
+    void gameStop();
 public:
     //void Drag(Vec2 Flag);
     //void Click(); 

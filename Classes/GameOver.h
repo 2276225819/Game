@@ -16,8 +16,17 @@ USING_NS_CC;
 
 class GameOver: public Layer
 {
+    int gameType=0;
 public:
+    static GameOver* Create(int i)
+    {
+        auto g=GameOver::create();
+        g->gameType=1;
+        return g;
+    }
     virtual bool init();
+    CREATE_FUNC(GameOver);
+    
 }
 ;
 #endif /* defined(__ddgame__GameOver__) */
