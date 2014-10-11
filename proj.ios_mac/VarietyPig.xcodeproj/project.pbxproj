@@ -43,7 +43,6 @@
 		488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA35F19E4D00C001D400C /* IndexLayer.cpp */; };
 		488DA36719E4D092001D400C /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA36419E4D05A001D400C /* MainScene.cpp */; };
 		48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C0BED419E4C1F0002735C9 /* GameLayer.cpp */; };
-		48D6D0E119E8C9C300A4ED27 /* back_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 48D6D0E019E8C9C300A4ED27 /* back_2.png */; };
 		48E8863819E66D7000752E11 /* ControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48E8863719E66D7000752E11 /* ControlLayer.cpp */; };
 		48ED2A6919E7848900D4E54E /* StartScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48ED2A6419E7843F00D4E54E /* StartScene.cpp */; };
 		48FED67D19E7B05700E083FE /* HardMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48FED67B19E7B05700E083FE /* HardMode.cpp */; };
@@ -279,7 +278,6 @@
 		488DA36519E4D05A001D400C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = ../Classes/MainScene.h; sourceTree = "<group>"; };
 		48C0BED419E4C1F0002735C9 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = ../Classes/GameLayer.cpp; sourceTree = "<group>"; };
 		48C0BED519E4C1F0002735C9 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = ../Classes/GameLayer.h; sourceTree = "<group>"; };
-		48D6D0E019E8C9C300A4ED27 /* back_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_2.png; path = ../../box2dT/Resources/back_2.png; sourceTree = "<group>"; };
 		48E8863619E66D7000752E11 /* ControlLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlLayer.h; sourceTree = "<group>"; };
 		48E8863719E66D7000752E11 /* ControlLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ControlLayer.cpp; sourceTree = "<group>"; };
 		48ED2A6419E7843F00D4E54E /* StartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StartScene.cpp; sourceTree = "<group>"; };
@@ -573,7 +571,6 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				48D6D0E019E8C9C300A4ED27 /* back_2.png */,
 				00B6862819E7D89400A6EDA2 /* yg.png */,
 				00B6862919E7D89400A6EDA2 /* ygbg.png */,
 				00B6862119E7D70C00A6EDA2 /* SlideUp.png */,
@@ -758,7 +755,6 @@
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
-				48D6D0E119E8C9C300A4ED27 /* back_2.png in Resources */,
 				00B6862419E7D70C00A6EDA2 /* SlideDown.png in Resources */,
 				00B6862A19E7D89400A6EDA2 /* yg.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,

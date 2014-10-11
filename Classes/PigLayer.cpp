@@ -35,7 +35,11 @@ void PigLayer::addRndPig()
 {
     int Fx = arc4random()%8;//方向
     int Tp= arc4random()%7; //小猪类型
-    //Tp=1;
+<<<<<<< HEAD
+
+=======
+    Tp=3;
+>>>>>>> FETCH_HEAD
     addPig(Fx, Tp+1);
 }
 void PigLayer::pigDelete()

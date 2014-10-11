@@ -40,10 +40,10 @@ ControlLayer* ControlLayer::CreateAt(int type)
     type=UserDefault::getInstance()->getBoolForKey("IMode", 1);
     
     switch (type) {
-        case 1:
+        case 2:
             ct= new RockerControl();
             break;
-        case 2:
+        case 1:
             ct= new TouchControl();
             break;
         default:
@@ -56,15 +56,15 @@ ControlLayer* ControlLayer::CreateAt(int type)
 
 
 
-TouchControl::TouchControl():ControlLayer()
+TouchControl::TouchControl():ControlLayer()//按钮
 {
     
     const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
     auto menu=Menu::create();
     menu->setContentSize(Size(100 ,100));
-    menu->setPosition(640/2,-10);
+    menu->setPosition(640/2,5);
     menu->ignoreAnchorPointForPosition(false);
-    menu->setAnchorPoint(Vec2(0.5,1));
+    menu->setAnchorPoint(Vec2(0.5,0));
 
     for (int i=0; i<8; i++) {
         auto sQ=Sprite::create("CloseNormal.png");
@@ -77,7 +77,7 @@ TouchControl::TouchControl():ControlLayer()
     addChild(menu);
 }
 
-DragControl::DragControl():ControlLayer()
+DragControl::DragControl():ControlLayer()//滑动
 {
     listen->onTouchEnded =[&](Touch *pTouch, Event *pEvent){
         Vec2 np=pTouch->getLocation();
@@ -89,7 +89,7 @@ DragControl::DragControl():ControlLayer()
     };
 }
 
-RockerControl::RockerControl():ControlLayer()
+RockerControl::RockerControl():ControlLayer()//摇杆
 {
     auto s=Director::getInstance()->getVisibleSize();
     auto Right = JoyStick::create(30, 100, false, true, false, false);
