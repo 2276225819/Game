@@ -52,8 +52,6 @@ void Pig::Click()
 {
     
 }
-
-
 bool Pig::isDie()
 {
     return Hp==0;
@@ -62,6 +60,13 @@ void Pig::Kill()
 {
     Hp=0;
     getParent()->removeChild(this); 
+}
+void Pig::Die()
+{
+    stopAllActions();
+    runAction(Sequence::create(MoveTo::create(0.2, v*640),CallFunc::create([this]{
+         Kill();
+    }) , NULL) );
 }
 void Pig::Remove()
 {

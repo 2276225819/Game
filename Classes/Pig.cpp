@@ -18,6 +18,29 @@ void PigClick::Click()
     hit();
     Hp--;
 }
+void PigClick::Die()
+{
+    stopAllActions();
+    runAction(
+              Sequence::
+              create(
+                     Repeat::
+                     create(
+                            Sequence::
+                            create(
+                                   RotateBy::
+                                   create(0.05, -10),
+                                   RotateBy::
+                                   create(0.05, 10),
+                                   NULL),
+                            3),
+                     FadeOut::
+                     create(0.5),
+                     CallFunc::
+                     create([this]{Kill(); }),
+                     NULL)  );
+ 
+}
 
 const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
 
@@ -28,7 +51,7 @@ void PigClone::Avatar() //分身函数
     auto parent = (PigLayer*)getParent();
     for (int i=0; i<4; i++) {
         Rand+=arc4random()%2+1;
-        auto child = PigLayer::createPig(8);
+        auto child = PigLayer::createPigById(8);
         child->RunAt(Flag[(Rand)%8],this->getPosition());
         parent->addChild(child);
         child->setTag((Rand%8));
@@ -44,6 +67,7 @@ void PigSwap::Orbit()
 }
 void PigSwap::Run(Vec2 v)//变轨猪移动
 {
+    this->v=v;
     setPosition(FlagToVec(v));
     v=Vec2(0.5, 0.5);
     v=FlagToVec(v);
@@ -56,12 +80,14 @@ void PigReverse::Run(Vec2 v)//箭猪移动
 }
 void PigClone::Run(Vec2 v)//分身猪移动
 {
+    this->v=v;
     setPosition(FlagToVec(v));
     v=Vec2(0.5, 0.5);
     v=FlagToVec(v);
     auto mt = MoveTo::create(this->Speed, Vec2(RectSize - v.x, RectSize - v.y));
     this->runAction(Sequence::create(mt,CallFunc::create(CC_CALLBACK_0(PigClone::Avatar, this)), NULL));
 }
+
 
 void PigHide::Run(Vec2 v)
 {

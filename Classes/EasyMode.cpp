@@ -30,8 +30,7 @@ bool EasyMode:: init()//游戏模式一：随机创建
 bool TestMode:: init()//游戏模式：随机创建
 {
     GameMode=2;
-    GameLayer::init();
-    
+    GameLayer::init(); 
     ActionInterval* ac;
     ac=Sequence::create(CallFunc::create([&]{
         pigs->addPig(rand()%8, 1);

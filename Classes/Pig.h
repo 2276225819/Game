@@ -21,6 +21,7 @@ public:
     PigClick(int speed,int hp);
     void Drag(int tag);
     void Click();
+    void Die();
 };
 
 

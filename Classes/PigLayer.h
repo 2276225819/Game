@@ -28,13 +28,11 @@ public:
     void removeChild(Node* child, bool cleanup = true);
     
     void each(std::function<bool(Pig*)> fn);
-    static Pig* createPig(int pigType);
+    static Pig* createPigById(int pigType);
     std::function<void(Pig*)> onFlee;
     
 }
 ;
-
-//Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
 
 
 #endif /* defined(__ddgame__PigLayer__) */

@@ -74,7 +74,7 @@ bool GameLayer::onPigDelete(Pig* pig)
 {
     if (pig->isDie())
     {
-        pig->Kill();
+        pig->Die();
         this->addScore(1);
         return false;
     }
@@ -88,7 +88,7 @@ void GameLayer::gameStop()
         return true;
     });
     pigs->stopAllActions();
-    
+    removeChild(ctrl);
 }
 
 

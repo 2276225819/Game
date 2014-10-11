@@ -18,16 +18,18 @@ protected:
     void hit();
 
     int Speed;
-    Vec2 v;
+    
     int Hp;
     int RectSize = 640;
 public:
+    Vec2 v;
     int MaxHp;
 public:
     virtual void Run(Vec2 v);
     virtual void RunAt(Vec2 v,Vec2 pos);
     virtual void Drag(int tag);
     virtual void Click();
+    virtual void Die();
     virtual void Remove();
     Vec2 FlagToVec(Vec2 v);
     bool isDie();

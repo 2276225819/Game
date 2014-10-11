@@ -21,7 +21,7 @@ public:
     static GameOver* Create(int i)
     {
         auto g=GameOver::create();
-        g->gameType=1;
+        g->gameType=i;
         return g;
     }
     virtual bool init();
