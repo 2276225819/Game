@@ -62,9 +62,9 @@ TouchControl::TouchControl():ControlLayer()
     const Vec2 Flag[8] = {Vec2(0,0),Vec2(0,0.5),Vec2(0,1),Vec2(0.5,1),Vec2(1,1),Vec2(1,0.5),Vec2(1,0),Vec2(0.5,0)};
     auto menu=Menu::create();
     menu->setContentSize(Size(100 ,100));
-    menu->setPosition(640/2,-10);
+    menu->setPosition(640/2,5);
     menu->ignoreAnchorPointForPosition(false);
-    menu->setAnchorPoint(Vec2(0.5,1));
+    menu->setAnchorPoint(Vec2(0.5,0));
 
     for (int i=0; i<8; i++) {
         auto sQ=Sprite::create("CloseNormal.png");
