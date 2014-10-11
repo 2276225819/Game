@@ -29,7 +29,7 @@ public:
     
     void each(std::function<bool(Pig*)> fn);
     static Pig* createPig(int pigType);
-    std::function<void(Pig*)> onRemove;
+    std::function<void(Pig*)> onFlee;
     
 }
 ;

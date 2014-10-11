@@ -63,15 +63,10 @@ bool GameLayer::init()
             return onPigDelete(pig);
         });
     };
-    pigs->onRemove=[this](Pig* pig){
-        if (!pig->isDie())
-        {
-            this->gameStop();
-            this->addChild(GameOver::Create(GameMode));
-            //int life
-            //SceneSwitch::Starting();
-            ::shake(root);
-        }
+    pigs->onFlee=[this](Pig* pig){
+        this->gameStop();
+        this->addChild(GameOver::Create(GameMode));
+        ::shake(root);
     };
     return true;
 }
