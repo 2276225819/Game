@@ -13,9 +13,7 @@
 bool HardMode:: init()//游戏模式二：疯狂模式
 {
     GameMode=1;
-    GameLayer::init();
-    
-    
+    GameLayer::init(); 
         ActionInterval* ac;
     ac=Sequence::create(CallFunc::create([&]{
         pigs->addRndPig();
