@@ -50,14 +50,9 @@ void PigSwap::Run(Vec2 v)//变轨猪移动
     auto mt = MoveTo::create(this->Speed, Vec2(RectSize - v.x, RectSize - v.y));
     this->runAction(Sequence::create(mt,CallFunc::create(CC_CALLBACK_0(PigSwap::Orbit , this)), NULL));
 }
-void PigReverse::Run(Vec2 v)//反向猪移动
+void PigReverse::Run(Vec2 v)//箭猪移动
 {
-    Vec2 po=v*RectSize;                  //起点位置
-    Vec2 pt=Vec2(RectSize-po.x , RectSize-po.y);//对角线位置
-    setPosition(pt);
-    runAction(Sequence::create(MoveTo::create(Speed, po),CallFunc::create([this](){
-        this->Kill();
-    }), NULL));
+    Pig::Run(Vec2(1-v.x,1-v.y));
 }
 void PigClone::Run(Vec2 v)//分身猪移动
 {

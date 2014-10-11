@@ -7,7 +7,7 @@
 //
 
 #include "GameLayer.h" 
-#include "GameOver.h"
+#include "GameOver.h";
 #include "SceneSwitch.h"
 
 void shake(Node* n)
@@ -52,7 +52,7 @@ bool GameLayer::init()
             if (pig->getBoundingBox().containsPoint(offPosition(np, root)))
             {
                 pig->Click();
-                return onPigDelete(pig);
+                return pig->isDie();
             }
             return true;
         });
@@ -60,7 +60,7 @@ bool GameLayer::init()
     ctrl->onDrag=[this](int tg){
         pigs->each([&](Pig* pig){
             pig->Drag(tg);
-            return onPigDelete(pig);
+            return pig->isDie();
         });
     };
     pigs->onRemove=[this](Pig* pig){
@@ -70,17 +70,11 @@ bool GameLayer::init()
             this->addChild(GameOver::Create(GameMode));
             ::shake(root);
         }
+        else
+        {
+            this->addScore(1);
+        }
     };
-    return true;
-}
-bool GameLayer::onPigDelete(Pig* pig)
-{
-    if (pig->isDie())
-    {
-        pig->Kill();
-        this->addScore(1);
-        return false;
-    }
     return true;
 }
 void GameLayer::gameStop()
@@ -91,7 +85,7 @@ void GameLayer::gameStop()
         return true;
     });
     pigs->stopAllActions();
-    removeChild(ctrl);
+    
 }
 
 

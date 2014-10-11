@@ -60,11 +60,8 @@ bool Pig::isDie()
 }
 void Pig::Kill()
 {
-    Hp=0;
-    //runAction(Sequence::create(MoveTo::create(1, v*RectSize),CallFunc::create([this]{
-        getParent()->removeChild(this);
-    
-    //}), NULL));
+    Hp=0; 
+    getParent()->removeChild(this); 
 }
 void Pig::Remove()
 {
