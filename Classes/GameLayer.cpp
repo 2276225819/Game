@@ -37,8 +37,8 @@ bool GameLayer::init()
     Size s=Director::getInstance()->getVisibleSize();
     root=LayerColor::create(Color4B(100, 100, 100, 255), 640, 640);
     root->ignoreAnchorPointForPosition(false);
-    root->setAnchorPoint(Vec2(0.5,0.5));
-    root->setPosition(s.width/2,s.height/2);
+    root->setAnchorPoint(Vec2(0.5,1));
+    root->setPosition(s.width/2,s.height);
     root->addChild(pigs=PigLayer::create());
     root->addChild(labScore=LabelTTF::create("Score:0", "yahei", 30));
     addChild(root);
