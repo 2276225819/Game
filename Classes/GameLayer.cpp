@@ -97,7 +97,7 @@ void GameLayer::addScore(int i)
     score+=i;
     labScore->stopAllActions();
     labScore->runAction(Sequence::create(ScaleBy::create(0.3, 1.1),ScaleTo::create(1, 1),CallFunc::create([]{
-        //MessageBox("", <#const char *title#>)
+ 
     
     }), NULL));
     labScore->setString(String::createWithFormat("Score:%d",score)->getCString());
