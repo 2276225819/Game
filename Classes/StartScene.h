@@ -18,7 +18,7 @@ class StartScene:public Scene
 public:
     int PigId;
     bool init();
-    void PigAnimation(float f);
+    void PigAnimation(Node * n);
     CREATE_FUNC(StartScene);
 };
 
