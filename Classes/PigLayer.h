@@ -27,7 +27,7 @@ public:
     void addRndPig();
     void removeChild(Node* child, bool cleanup = true);
     
-    void each(std::function<bool(Pig*)> fn);
+    bool each(std::function<bool(Pig*)> fn);
     static Pig* createPigById(int pigType);
     std::function<void(Pig*)> onFlee;
     

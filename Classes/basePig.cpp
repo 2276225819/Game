@@ -40,11 +40,12 @@ void Pig::hit()
     shake();
 }
 
-void Pig::Drag(int tag)
+bool Pig::Drag(int tag)
 {
      if (getTag()==tag)
      {
          hit();Hp--;
+         return true;
      }
 }
 
@@ -87,3 +88,21 @@ void Pig::RunAt(Vec2 v,Vec2 pos)
         Remove();
     }), NULL));
 }
+Pig::Pig()
+{
+
+}
+const int MaxSpeed = 4;
+Pig::Pig(int speed,int hp)
+{
+    this->Hp=hp;
+    this->Score=hp;
+    this->MaxHp=hp;
+    this->Speed=MaxSpeed - speed;
+    this->initWithFile("ice.png");
+    this->setScale(0.1, 0.1);
+    //onDelete=[](){};
+}
+
+
+

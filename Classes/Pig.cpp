@@ -9,7 +9,7 @@
 #include "Pig.h"
 #include "PigLayer.h"
  
-void PigClick::Drag(int tag)
+bool PigClick::Drag(int tag)
 {
     
 }
@@ -104,22 +104,7 @@ void PigHide::Run(Vec2 v)
     auto fi = FadeIn::create(4);
     Pig::Run(v);
     this->runAction(Sequence::create(fo,fi, NULL));
-}
-
-const int MaxSpeed = 4;
-Pig::Pig(int speed,int hp)
-{
-    this->Hp=hp;
-    this->MaxHp=hp;
-    this->Speed=MaxSpeed - speed;
-    this->initWithFile("ice.png");
-    this->setScale(0.1, 0.1);
-    //onDelete=[](){};
-}
-
-
-
-
+} 
 
 PigReverse::PigReverse(int speed,int hp):Pig(speed,hp) {
     
