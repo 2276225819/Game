@@ -16,11 +16,9 @@ USING_NS_CC;
 class StartScene:public Scene
 {
 public:
+    int PigId;
     bool init();
-<<<<<<< HEAD
     void PigAnimation(Node * n);
-=======
->>>>>>> FETCH_HEAD
     CREATE_FUNC(StartScene);
 };
 
