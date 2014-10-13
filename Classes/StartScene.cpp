@@ -13,7 +13,7 @@
 bool StartScene::init()
 {
     PigId=0;
-    auto l=LayerColor::create(Color4B(100, 100, 100, 255), 640, 1136);
+    auto l=LayerColor::create(Color4B(100, 100, 100, 255), 640, 1136);//创建一个背景层
     auto Normal = LabelTTF::create("简单模式", "", 30);//创建简单模式按钮
     auto Insane = LabelTTF::create("疯狂模式", "", 30);//创建疯狂模式按钮
     auto Flurry = LabelTTF::create("群猪乱舞", "", 30);//创建群猪乱舞按钮
@@ -45,16 +45,18 @@ bool StartScene::init()
     addChild(l);//将背景层加入场景
     
     //－－－－－－－－－－－－－－猪的动画－－－－－－－－－－－－－－－－－
-    
+
     return true;
 }
 
 void StartScene::PigAnimation(float f)
 {
-    float PosPercent = 0.8;
-    auto WinSize = Director::getInstance()->getWinSize();
-    auto Pig = PigLayer::createPigById(PigId);
+    auto WinSize = Director::getInstance()->getWinSize();//获取窗口大小
+    float PosPercent = 0.8;//小猪出现的位置会在屏幕高度的百分比
+    auto Pig = PigLayer::createPigById(PigId+1);
     Pig->setPosition(Vec2(0, WinSize.height*PosPercent));
-    
+    auto Move = MoveBy::create(3, Vec2(WinSize.width, 0));
+    //Pig->runAction();
     PigId = (PigId+1)%8;
 }
+
