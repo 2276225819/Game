@@ -62,6 +62,7 @@ bool GameLayer::init()
                 onPigDelete(pig);
             else
                 return true;
+            return false;
         });
         if(isnull)
             setCombo(0);
