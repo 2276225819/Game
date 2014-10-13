@@ -39,13 +39,16 @@ bool GameLayer::init()
     root->ignoreAnchorPointForPosition(false);
     root->setAnchorPoint(Vec2(0.5,1));
     root->setPosition(s.width/2,s.height);
+    //小猪层
     root->addChild(pigs=PigLayer::create());
+    //控制模式
+    this->addChild(ctrl=ControlLayer::CreateAt(0));
+    //得分界面
     root->addChild(labScore=LabelTTF::create("Score:0", "yahei", 30));
-    addChild(root);
-    addChild(ctrl=ControlLayer::CreateAt(0));
     labScore->setPosition(0,640 - labScore->getBoundingBox().size.height);
-    labScore->setAnchorPoint(Vec2(0,0)); 
- 
+    labScore->setAnchorPoint(Vec2(0,0));
+    //主游戏层
+    addChild(root);
     ctrl->onClick=[&](Vec2 np){
         pigs->each([&](Pig* pig){
             if (pig->getBoundingBox().containsPoint(offPosition(np, root)))
@@ -68,8 +71,8 @@ bool GameLayer::init()
             setCombo(0);
     };
     pigs->onFlee=[this](Pig* pig){
-        //this->gameStop();
-        //this->addChild(GameOver::Create(GameMode));
+        this->gameStop();
+        this->addChild(GameOver::Create(GameMode));
         ::shake(root);
     };
     return true;
@@ -97,6 +100,7 @@ void GameLayer::gameStop()
 
 void GameLayer::setCombo(int i)
 {
+    auto lab=LabelTTF::create("", "", 50);
     if (i==0)
         log("bad");
     else

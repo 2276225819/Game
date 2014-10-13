@@ -13,15 +13,16 @@
 
 class EasyMode :public GameLayer
 {
-public: 
+public:
     bool init();
+    bool onPigDelete(Pig *pig);
     CREATE_FUNC(EasyMode);
 };
 
 class TestMode :public GameLayer
 {
 public:
-    bool init();
+    bool init(); 
     CREATE_FUNC(TestMode);
 };
 
