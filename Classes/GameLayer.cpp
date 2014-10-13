@@ -68,8 +68,8 @@ bool GameLayer::init()
             setCombo(0);
     };
     pigs->onFlee=[this](Pig* pig){
-        this->gameStop();
-        this->addChild(GameOver::Create(GameMode));
+        //this->gameStop();
+        //this->addChild(GameOver::Create(GameMode));
         ::shake(root);
     };
     return true;

@@ -8,7 +8,6 @@
 
 #include "SceneSwitch.h"
 
-#include "IndexLayer.h"
 #include "GameOver.h"
 #include "GameLayer.h"
 #include "EasyMode.h"
@@ -23,13 +22,6 @@ Scene* CreateScene(Layer* l)
     return s;
 }
 
-void SceneSwitch::Index()
-{
-    Scene * s = Scene::create();
-    auto Index = IndexLayer::create();
-    s->addChild(Index);
-    Director::getInstance()->replaceScene(s);
-}
 void SceneSwitch::Starting()
 {
     auto s=StartScene::create();

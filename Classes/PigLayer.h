@@ -25,6 +25,7 @@ public:
 public:
     void addPig(int Fx,int Tp);
     void addRndPig();
+    void addRndPig(int Percent);
     void removeChild(Node* child, bool cleanup = true);
     
     bool each(std::function<bool(Pig*)> fn);

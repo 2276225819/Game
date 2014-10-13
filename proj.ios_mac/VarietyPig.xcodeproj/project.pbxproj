@@ -40,7 +40,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		4803139F19E78C01004474E0 /* EasyMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4803139E19E78C01004474E0 /* EasyMode.cpp */; };
-		488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA35F19E4D00C001D400C /* IndexLayer.cpp */; };
 		488DA36719E4D092001D400C /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 488DA36419E4D05A001D400C /* MainScene.cpp */; };
 		48C0BED619E4C1F0002735C9 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C0BED419E4C1F0002735C9 /* GameLayer.cpp */; };
 		48E8863819E66D7000752E11 /* ControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48E8863719E66D7000752E11 /* ControlLayer.cpp */; };
@@ -272,8 +271,6 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4803139E19E78C01004474E0 /* EasyMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EasyMode.cpp; sourceTree = "<group>"; };
-		488DA35F19E4D00C001D400C /* IndexLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IndexLayer.cpp; path = ../Classes/IndexLayer.cpp; sourceTree = "<group>"; };
-		488DA36019E4D00C001D400C /* IndexLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexLayer.h; path = ../Classes/IndexLayer.h; sourceTree = "<group>"; };
 		488DA36419E4D05A001D400C /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = ../Classes/MainScene.cpp; sourceTree = "<group>"; };
 		488DA36519E4D05A001D400C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = ../Classes/MainScene.h; sourceTree = "<group>"; };
 		48C0BED419E4C1F0002735C9 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = ../Classes/GameLayer.cpp; sourceTree = "<group>"; };
@@ -513,8 +510,6 @@
 				48E8863719E66D7000752E11 /* ControlLayer.cpp */,
 				48C0BED419E4C1F0002735C9 /* GameLayer.cpp */,
 				48C0BED519E4C1F0002735C9 /* GameLayer.h */,
-				488DA35F19E4D00C001D400C /* IndexLayer.cpp */,
-				488DA36019E4D00C001D400C /* IndexLayer.h */,
 				00CEBD3719E4E56D00D8704E /* GameOver.cpp */,
 				00CEBD3819E4E56D00D8704E /* GameOver.h */,
 				00B5326F19E516F700E22EC8 /* PigLayer.cpp */,
@@ -804,7 +799,6 @@
 				00A6446619E6906E0043E915 /* basePig.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				488DA36119E4D00C001D400C /* IndexLayer.cpp in Sources */,
 				48ED2A6919E7848900D4E54E /* StartScene.cpp in Sources */,
 				48E8863819E66D7000752E11 /* ControlLayer.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,

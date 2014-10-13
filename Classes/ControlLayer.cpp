@@ -67,9 +67,10 @@ TouchControl::TouchControl():ControlLayer()//按钮
     for (int i=0; i<8; i++) {
         auto sQ=Sprite::create("CloseNormal.png");
         auto item=MenuItemSprite::create(sQ, sQ,[this,i](Ref* r){
-            this->onDrag(i);
+            //this->onDrag(i);
+            log("%d",i);
         });
-        Vec2 r= Vec2::forAngle(CC_DEGREES_TO_RADIANS(i*45+(90+45)))*80;
+        Vec2 r= Vec2::forAngle(CC_DEGREES_TO_RADIANS((360-(i*45))-(90+45)))*80;
         item->setPosition(r + Vec2(s.width/2, (s.height-640)/2));
         menu->addChild(item);
     }

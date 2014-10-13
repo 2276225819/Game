@@ -38,6 +38,18 @@ void PigLayer::addRndPig()
     Tp=1;
     addPig(Fx, Tp);
 }
+void PigLayer::addRndPig(int Percent)
+{
+    int Fx = arc4random()%8;//方向
+    int Tp= arc4random()%100 + 1;//小猪类型
+    if (Tp<Percent) {
+        addPig(Fx, 1);
+        return;
+    }
+    addPig(Fx, arc4random()%7+2);
+}
+
+
 void PigLayer::pigDelete()
 {
     
