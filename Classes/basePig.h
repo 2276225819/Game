@@ -23,8 +23,7 @@ protected:
     int Speed;
     int Hp;
     int RectSize = 640;
-
-
+    //hehehe
 public:
     virtual void Run(Vec2 v);
     virtual void RunAt(Vec2 v,Vec2 pos);
