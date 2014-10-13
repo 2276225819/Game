@@ -18,6 +18,7 @@ USING_NS_CC;
 class SceneSwitch
 {
 public: 
+    static void Index();
     static void Seting();
     static void Starting();
     static void Playing(int Flag);

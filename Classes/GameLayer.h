@@ -12,19 +12,19 @@ protected:
     PigLayer* pigs;
     LabelTTF* labScore;
     ControlLayer* ctrl;
-    int GameMode=0;
-private: 
+    private:
     int score=0;
     void initEvent();
     void gameStop();
 public:
+    int GameMode=1; 
     void setCombo(int i);
     int Combo=0;
     void addScore(int i);
     bool init();
     CREATE_FUNC(GameLayer);
 public: 
-    bool onPigDelete(Pig *pig);
+    virtual bool onPigDelete(Pig *pig);
 };
 
 #endif /* defined(__ddgame__GameLayer__) */

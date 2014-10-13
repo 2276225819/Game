@@ -12,8 +12,16 @@
 
 #include "GameLayer.h"
 
-class HardMode :public GameLayer
+class FastMode :public GameLayer
 {
+public:
+    bool init();
+    CREATE_FUNC(FastMode);
+};
+
+
+
+class HardMode :public GameLayer{
 public:
     bool init();
     CREATE_FUNC(HardMode);
