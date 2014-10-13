@@ -13,21 +13,22 @@
 USING_NS_CC;
 class Pig:public Sprite
 {
+public:
+    Vec2 v;
+    int MaxHp=0;
+    int Score=0;
 protected:
     void shake();
     void hit();
-
     int Speed;
-    
     int Hp;
+
     int RectSize = 640;
-public:
-    Vec2 v;
-    int MaxHp;
+
 public:
     virtual void Run(Vec2 v);
     virtual void RunAt(Vec2 v,Vec2 pos);
-    virtual void Drag(int tag);
+    virtual bool Drag(int tag);
     virtual void Click();
     virtual void Die();
     virtual void Remove();

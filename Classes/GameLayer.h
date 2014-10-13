@@ -13,13 +13,15 @@ protected:
     LabelTTF* labScore;
     ControlLayer* ctrl;
     int GameMode=0;
-private:
+private: 
     int score=0;
     void initEvent();
     void gameStop();
 public:
     //void Drag(Vec2 Flag);
-    //void Click(); 
+    //void Click();
+    void setCombo(int i);
+    int getCombo();
     void addScore(int i);
     bool init();
     CREATE_FUNC(GameLayer);

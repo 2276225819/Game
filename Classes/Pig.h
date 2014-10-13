@@ -19,7 +19,7 @@ class PigClick: public Pig
 public:
     PigClick();
     PigClick(int speed,int hp);
-    void Drag(int tag);
+    bool Drag(int tag);
     void Click();
     void Die();
 };

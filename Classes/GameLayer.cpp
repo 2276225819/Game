@@ -43,12 +43,11 @@ bool GameLayer::init()
     root->addChild(labScore=LabelTTF::create("Score:0", "yahei", 30));
     addChild(root);
     addChild(ctrl=ControlLayer::CreateAt(0));
-    labScore->setPosition(0,s.height/2);
+    labScore->setPosition(0,640 - labScore->getBoundingBox().size.height);
     labScore->setAnchorPoint(Vec2(0,0)); 
  
     ctrl->onClick=[&](Vec2 np){
         pigs->each([&](Pig* pig){
-            Vec2 tt=offPosition(np, root);
             if (pig->getBoundingBox().containsPoint(offPosition(np, root)))
             {
                 pig->Click();
@@ -58,10 +57,14 @@ bool GameLayer::init()
         });
     };
     ctrl->onDrag=[this](int tg){
-        pigs->each([&](Pig* pig){
-            pig->Drag(tg);
-            return onPigDelete(pig);
+        bool isnull=pigs->each([&](Pig* pig){
+            if(pig->Drag(tg))
+                onPigDelete(pig);
+            else
+                return true;
         });
+        if(isnull)
+            setCombo(0);
     };
     pigs->onFlee=[this](Pig* pig){
         this->gameStop();
@@ -75,7 +78,7 @@ bool GameLayer::onPigDelete(Pig* pig)
     if (pig->isDie())
     {
         pig->Die();
-        this->addScore(1);
+        this->addScore(pig->Score);
         return false;
     }
     return true;
@@ -91,15 +94,41 @@ void GameLayer::gameStop()
     removeChild(ctrl);
 }
 
-int zScore=1;
+void GameLayer::setCombo(int i)
+{
+    if (i==0)
+        log("bad");
+    else
+        switch (i/10) {
+            case 0:
+                log("D");
+            break;
+            case 1:
+                log("C");
+                break;
+            case 2:
+                log("B");
+                break;
+            case 3:
+                log("A");
+                break;
+            default:
+                log("S");
+        }
+}
+int GameLayer::getCombo()
+{
+    static int g=0;
+    return g;
+}
 void GameLayer::addScore(int i)
 {
     score+=i;
+    setCombo(getCombo()+1);
     labScore->stopAllActions();
     labScore->runAction(Sequence::create(ScaleBy::create(0.3, 1.1),ScaleTo::create(1, 1),CallFunc::create([]{
- 
-    
     }), NULL));
+    
     labScore->setString(String::createWithFormat("Score:%d",score)->getCString());
 
 }

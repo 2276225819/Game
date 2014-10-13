@@ -35,7 +35,7 @@ void PigLayer::addRndPig()
 {
     int Fx = arc4random()%8;//方向
     int Tp= arc4random()%7+1; //小猪类型
-    Tp=7;
+    Tp=3;
     addPig(Fx, Tp);
 }
 void PigLayer::pigDelete()
@@ -43,15 +43,16 @@ void PigLayer::pigDelete()
     
 }
 
-void PigLayer::each(std::function<bool(Pig*)> fn)
+bool PigLayer::each(std::function<bool(Pig*)> fn)
 {
     auto ls=getChildren();
     for (int i=0,len=(int)(ls.size()); i<len; i++) {
         auto p=(Pig *)ls.at(i);
         if (!p->isDie())
             if(!fn(p))
-                break;
+                return false;
     }
+    return true;
 }
 
 std::string s[] ={"普通","快速","厚血","箭猪","变轨","分身","隐形","分身猪"};
