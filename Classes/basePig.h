@@ -22,9 +22,13 @@ protected:
     void hit();
     int Speed;
     int Hp;
+<<<<<<< HEAD
 
     int RectSize = 640;
 
+=======
+    int RectSize = 640;  
+>>>>>>> FETCH_HEAD
 public:
     virtual void Run(Vec2 v);
     virtual void RunAt(Vec2 v,Vec2 pos);
