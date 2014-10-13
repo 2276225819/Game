@@ -18,21 +18,13 @@ private:
     void initEvent();
     void gameStop();
 public:
-    //void Drag(Vec2 Flag);
-    //void Click();
     void setCombo(int i);
-    int getCombo();
+    int Combo=0;
     void addScore(int i);
     bool init();
     CREATE_FUNC(GameLayer);
-    //static Scene* CreateScene(IMode mode) ;
 public: 
     bool onPigDelete(Pig *pig);
 };
-
-
-
-
-
 
 #endif /* defined(__ddgame__GameLayer__) */

@@ -99,7 +99,7 @@ void GameLayer::setCombo(int i)
     if (i==0)
         log("bad");
     else
-        switch (i/10) {
+        switch ((int)(i/2)) {
             case 0:
                 log("D");
             break;
@@ -115,16 +115,13 @@ void GameLayer::setCombo(int i)
             default:
                 log("S");
         }
+    Combo=i;
 }
-int GameLayer::getCombo()
-{
-    static int g=0;
-    return g;
-}
+
 void GameLayer::addScore(int i)
 {
     score+=i;
-    setCombo(getCombo()+1);
+    setCombo(Combo+1);
     labScore->stopAllActions();
     labScore->runAction(Sequence::create(ScaleBy::create(0.3, 1.1),ScaleTo::create(1, 1),CallFunc::create([]{
     }), NULL));
